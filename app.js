@@ -1,152 +1,81 @@
-const supabase = window.supabase.createClient(
- "https://hxvaxyuvjxydeajnqmyr.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4dmF4eXV2anh5ZGVham5xbXlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3NTU5MzMsImV4cCI6MjA5MTMzMTkzM30.e2g9aVJFjuOJdEa1dfqwIk3rr-VzN6Fp9DJjFClPcAE"
-);
 
-let chartInstance;
+const supabase = createClient(supabaseUrl, supabaseKey)
+const supabaseUrl = 'https://hxvaxyuvjxydeajnqmyr.supabase.co'
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4dmF4eXV2anh5ZGVham5xbXlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3NTU5MzMsImV4cCI6MjA5MTMzMTkzM30.e2g9aVJFjuOJdEa1dfqwIk3rr-VzN6Fp9DJjFClPcAE'
 
-// =====================
-// TAB SYSTEM (WINDOW STYLE)
-// =====================
-window.addEventListener("DOMContentLoaded", () => {
-
-  function showTab(tabId) {
-    document.querySelectorAll(".tab").forEach(tab => {
-      tab.style.display = "none";
-    });
-
-    const target = document.getElementById(tabId);
-    if (target) target.style.display = "block";
-  }
-
-  const buttons = document.querySelectorAll(".tab-btn");
-
-  console.log("Buttons found:", buttons.length); // DEBUG
-
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      console.log("Clicked:", btn.dataset.tab); // DEBUG
-      showTab(btn.dataset.tab);
-    });
-  });
-
-  // default tab
-  showTab("dashboard");
-});
-
-// =====================
-// INIT TABS
-// =====================
-function initTabs() {
-  document.querySelectorAll(".tab-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      showTab(btn.dataset.tab);
-    });
-  });
-
-  showTab("dashboard");
+window.showTab = function(tab) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.add('hidden'))
+  document.getElementById(tab).classList.remove('hidden')
 }
 
-// =====================
-// ADD PRODUCT
-// =====================
-async function addProduct() {
-  await supabase.from("products").insert([{
-    name: document.getElementById("name").value,
-    price: document.getElementById("price").value,
-    cost: document.getElementById("cost").value,
-    stock: document.getElementById("stock").value
-  }]);
+// INVENTORY
+window.addItem = async function() {
+  const name = document.getElementById('itemName').value
+  const qty = document.getElementById('itemQty').value
 
-  fetchData();
+  await supabase.from('inventory').insert([{ name, qty }])
+  loadInventory()
 }
 
-// =====================
-// FETCH DATA
-// =====================
-async function fetchData() {
-  const { data: products } = await supabase.from("products").select("*");
-  const { data: sales } = await supabase.from("sales").select("*");
+async function loadInventory() {
+  const { data } = await supabase.from('inventory').select('*')
+  const list = document.getElementById('inventoryList')
+  list.innerHTML = ''
 
-  // inventory
-  const table = document.getElementById("inventoryTable");
-  const select = document.getElementById("productSelect");
-
-  table.innerHTML = "";
-  select.innerHTML = "";
-
-  products.forEach(p => {
-    table.innerHTML += `<tr><td>${p.name}</td><td>${p.stock}</td></tr>`;
-    select.innerHTML += `<option value="${p.id}">${p.name}</option>`;
-  });
-
-  // stats
-  const totalSales = sales.reduce((a,b) => a + (b.qty * b.price), 0);
-  const totalProfit = sales.reduce((a,b) => a + b.profit, 0);
-
-  document.getElementById("totalSales").innerText = totalSales;
-  document.getElementById("totalProfit").innerText = totalProfit;
-  document.getElementById("totalProducts").innerText = products.length;
-
-  renderChart(sales);
+  data.forEach(item => {
+    const li = document.createElement('li')
+    li.textContent = `${item.name} - ${item.qty}`
+    list.appendChild(li)
+  })
 }
 
-// =====================
-// SELL PRODUCT
-// =====================
-async function sellProduct() {
-  const id = document.getElementById("productSelect").value;
-  const qty = parseInt(document.getElementById("qty").value);
+// SALES
+window.addSale = async function() {
+  const item = document.getElementById('saleItem').value
+  const amount = document.getElementById('saleAmount').value
 
-  const { data: product } = await supabase
-    .from("products")
-    .select("*")
-    .eq("id", id)
-    .single();
-
-  const profit = (product.price - product.cost) * qty;
-
-  await supabase.from("sales").insert([{
-    product_id: id,
-    qty,
-    price: product.price,
-    profit
-  }]);
-
-  await supabase.from("products").update({
-    stock: product.stock - qty
-  }).eq("id", id);
-
-  fetchData();
+  await supabase.from('sales').insert([{ item, amount }])
+  loadSales()
+  loadChart()
 }
 
-// =====================
-// CHART
-// =====================
-function renderChart(sales) {
-  const ctx = document.getElementById("chart");
+async function loadSales() {
+  const { data } = await supabase.from('sales').select('*')
+  const list = document.getElementById('salesList')
+  list.innerHTML = ''
 
-  const labels = sales.map(s => s.id);
-  const data = sales.map(s => s.profit);
+  data.forEach(sale => {
+    const li = document.createElement('li')
+    li.textContent = `${sale.item} - ${sale.amount}`
+    list.appendChild(li)
+  })
+}
 
-  if (chartInstance) chartInstance.destroy();
+// DASHBOARD CHART
+let chart
+async function loadChart() {
+  const { data } = await supabase.from('sales').select('*')
 
-  chartInstance = new Chart(ctx, {
-    type: "bar",
+  const labels = data.map(s => s.item)
+  const values = data.map(s => s.amount)
+
+  const ctx = document.getElementById('salesChart')
+
+  if (chart) chart.destroy()
+
+  chart = new Chart(ctx, {
+    type: 'bar',
     data: {
-      labels,
-      datasets: [{ label: "Profit", data }]
+      labels: labels,
+      datasets: [{
+        label: 'Sales',
+        data: values
+      }]
     }
-  });
+  })
 }
 
-// =====================
-// INIT APP
-// =====================
-document.addEventListener("DOMContentLoaded", () => {
-  initTabs();
-  fetchData();
-
-  document.getElementById("addBtn").addEventListener("click", addProduct);
-  document.getElementById("sellBtn").addEventListener("click", sellProduct);
-});
+// INITIAL LOAD
+loadInventory()
+loadSales()
+loadChart()

@@ -1,111 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NANA BITES</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+<body class="bg-gray-100">
 
-<body class="bg-gray-100 p-6">
+  <div class="flex h-screen">
+    <!-- Sidebar -->
+    <div class="w-64 bg-gray-800 text-white p-4 space-y-4">
+      <button onclick="showTab('dashboard')" class="w-full text-left p-2 hover:bg-gray-700">Dashboard</button>
+      <button onclick="showTab('inventory')" class="w-full text-left p-2 hover:bg-gray-700">Inventory</button>
+      <button onclick="showTab('sales')" class="w-full text-left p-2 hover:bg-gray-700">Sales</button>
+    </div>
 
-<div class="max-w-6xl mx-auto">
-
-  <h1 class="text-3xl font-bold mb-4">NANA BITES</h1>
-
-  <!-- TAB BUTTONS -->
-  <div class="flex gap-2 mb-6">
-    <button class="tab-btn bg-blue-500 text-white px-4 py-2 rounded" data-tab="dashboard">
-      Dashboard
-    </button>
-
-    <button class="tab-btn bg-white px-4 py-2 rounded shadow" data-tab="inventory">
-      Inventory
-    </button>
-
-    <button class="tab-btn bg-white px-4 py-2 rounded shadow" data-tab="sales">
-      Sales
-    </button>
-  </div>
-
-  <!-- DASHBOARD -->
-  <div id="dashboard" class="tab">
-    <div class="grid grid-cols-3 gap-4 mb-6">
-      <div class="bg-white p-4 rounded shadow">
-        <h3>Total Sales</h3>
-        <p id="totalSales" class="text-xl font-bold"></p>
+    <!-- Content -->
+    <div class="flex-1 p-6">
+      
+      <!-- Dashboard -->
+      <div id="dashboard" class="tab">
+        <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
+        <canvas id="salesChart"></canvas>
       </div>
 
-      <div class="bg-white p-4 rounded shadow">
-        <h3>Total Profit</h3>
-        <p id="totalProfit" class="text-xl font-bold"></p>
+      <!-- Inventory -->
+      <div id="inventory" class="tab hidden">
+        <h1 class="text-2xl font-bold mb-4">Inventory</h1>
+        <input id="itemName" placeholder="Item Name" class="border p-2 mr-2">
+        <input id="itemQty" type="number" placeholder="Quantity" class="border p-2 mr-2">
+        <button onclick="addItem()" class="bg-blue-500 text-white px-4 py-2">Add</button>
+
+        <ul id="inventoryList" class="mt-4"></ul>
       </div>
 
-      <div class="bg-white p-4 rounded shadow">
-        <h3>Products</h3>
-        <p id="totalProducts" class="text-xl font-bold"></p>
+      <!-- Sales -->
+      <div id="sales" class="tab hidden">
+        <h1 class="text-2xl font-bold mb-4">Sales</h1>
+        <input id="saleItem" placeholder="Item" class="border p-2 mr-2">
+        <input id="saleAmount" type="number" placeholder="Amount" class="border p-2 mr-2">
+        <button onclick="addSale()" class="bg-green-500 text-white px-4 py-2">Add Sale</button>
+
+        <ul id="salesList" class="mt-4"></ul>
       </div>
-    </div>
 
-    <div class="bg-white p-4 rounded shadow">
-      <canvas id="chart"></canvas>
     </div>
   </div>
 
-  <!-- INVENTORY -->
-  <div id="inventory" class="tab" style="display:none;">
-
-    <div class="bg-white p-4 rounded shadow mb-4">
-      <h2 class="text-xl mb-2">Add Product</h2>
-
-      <input id="name" placeholder="Name" class="border p-2 mr-2">
-      <input id="price" type="number" placeholder="Price" class="border p-2 mr-2">
-      <input id="cost" type="number" placeholder="Cost" class="border p-2 mr-2">
-      <input id="stock" type="number" placeholder="Stock" class="border p-2 mr-2">
-
-      <button id="addBtn" class="bg-blue-500 text-white px-4 py-2 rounded">
-        Add
-      </button>
-    </div>
-
-    <div class="bg-white p-4 rounded shadow">
-      <h2 class="text-xl mb-2">Inventory</h2>
-
-      <table class="w-full">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Stock</th>
-          </tr>
-        </thead>
-        <tbody id="inventoryTable"></tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- SALES -->
-  <div id="sales" class="tab" style="display:none;">
-    <div class="bg-white p-4 rounded shadow">
-      <h2 class="text-xl mb-2">Sell Product</h2>
-
-      <select id="productSelect" class="border p-2 mr-2"></select>
-      <input id="qty" type="number" placeholder="Qty" class="border p-2 mr-2">
-
-      <button id="sellBtn" class="bg-green-500 text-white px-4 py-2 rounded">
-        Sell
-      </button>
-    </div>
-  </div>
-
-</div>
-
-<!-- Supabase -->
-<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-
-<!-- JS FILE -->
-<script src="app.js"></script>
-
+  <script type="module" src="app.js"></script>
 </body>
 </html>

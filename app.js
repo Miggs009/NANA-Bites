@@ -5,58 +5,45 @@ const supabase = window.supabase.createClient(
 
 let chartInstance;
 
-// ----------------------
-// TAB SYSTEM (FIXED)
-// ----------------------
-function showTab(tab) {
-  document.querySelectorAll(".tab").forEach(t => t.classList.add("hidden"));
-  document.getElementById(tab).classList.remove("hidden");
-
-  // optional: active button highlight
-  document.querySelectorAll(".tab-btn").forEach(b => {
-    b.classList.remove("bg-blue-500", "text-white");
-    b.classList.add("bg-white");
+// =====================
+// TAB SYSTEM (WINDOW STYLE)
+// =====================
+function showTab(tabId) {
+  document.querySelectorAll(".tab").forEach(tab => {
+    tab.style.display = "none";
   });
 
-  const activeBtn = document.querySelector(`[data-tab="${tab}"]`);
-  if (activeBtn) {
-    activeBtn.classList.add("bg-blue-500", "text-white");
-    activeBtn.classList.remove("bg-white");
+  document.getElementById(tabId).style.display = "block";
+
+  // active button style
+  document.querySelectorAll(".tab-btn").forEach(btn => {
+    btn.classList.remove("bg-blue-500", "text-white");
+    btn.classList.add("bg-white");
+  });
+
+  const active = document.querySelector(`[data-tab="${tabId}"]`);
+  if (active) {
+    active.classList.add("bg-blue-500", "text-white");
+    active.classList.remove("bg-white");
   }
 }
 
-// ----------------------
-// INIT TABS (SAFE BINDING)
-// ----------------------
+// =====================
+// INIT TABS
+// =====================
 function initTabs() {
-  const buttons = document.querySelectorAll(".tab-btn");
-
-  console.log("Tab buttons found:", buttons.length); // DEBUG
-
-  buttons.forEach(btn => {
+  document.querySelectorAll(".tab-btn").forEach(btn => {
     btn.addEventListener("click", () => {
-      const tab = btn.dataset.tab;
-      console.log("Switching to:", tab); // DEBUG
-      showTab(tab);
+      showTab(btn.dataset.tab);
     });
   });
 
   showTab("dashboard");
 }
 
-// ----------------------
-// INIT APP
-// ----------------------
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("App loaded");
-
-  initTabs();
-  initEvents();
-  fetchData();
-});
-// ----------------------
+// =====================
 // ADD PRODUCT
-// ----------------------
+// =====================
 async function addProduct() {
   await supabase.from("products").insert([{
     name: document.getElementById("name").value,
@@ -68,26 +55,26 @@ async function addProduct() {
   fetchData();
 }
 
-// ----------------------
+// =====================
 // FETCH DATA
-// ----------------------
+// =====================
 async function fetchData() {
   const { data: products } = await supabase.from("products").select("*");
   const { data: sales } = await supabase.from("sales").select("*");
 
-  // Inventory
-  const inv = document.getElementById("inventoryTable");
+  // inventory
+  const table = document.getElementById("inventoryTable");
   const select = document.getElementById("productSelect");
 
-  inv.innerHTML = "";
+  table.innerHTML = "";
   select.innerHTML = "";
 
   products.forEach(p => {
-    inv.innerHTML += `<tr><td>${p.name}</td><td>${p.stock}</td></tr>`;
+    table.innerHTML += `<tr><td>${p.name}</td><td>${p.stock}</td></tr>`;
     select.innerHTML += `<option value="${p.id}">${p.name}</option>`;
   });
 
-  // Stats
+  // stats
   const totalSales = sales.reduce((a,b) => a + (b.qty * b.price), 0);
   const totalProfit = sales.reduce((a,b) => a + b.profit, 0);
 
@@ -98,9 +85,9 @@ async function fetchData() {
   renderChart(sales);
 }
 
-// ----------------------
+// =====================
 // SELL PRODUCT
-// ----------------------
+// =====================
 async function sellProduct() {
   const id = document.getElementById("productSelect").value;
   const qty = parseInt(document.getElementById("qty").value);
@@ -127,9 +114,9 @@ async function sellProduct() {
   fetchData();
 }
 
-// ----------------------
+// =====================
 // CHART
-// ----------------------
+// =====================
 function renderChart(sales) {
   const ctx = document.getElementById("chart");
 
@@ -147,11 +134,13 @@ function renderChart(sales) {
   });
 }
 
-// ----------------------
-// START APP
-// ----------------------
+// =====================
+// INIT APP
+// =====================
 document.addEventListener("DOMContentLoaded", () => {
   initTabs();
-  initEvents();
   fetchData();
+
+  document.getElementById("addBtn").addEventListener("click", addProduct);
+  document.getElementById("sellBtn").addEventListener("click", sellProduct);
 });

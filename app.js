@@ -8,25 +8,31 @@ let chartInstance;
 // =====================
 // TAB SYSTEM (WINDOW STYLE)
 // =====================
-function showTab(tabId) {
-  document.querySelectorAll(".tab").forEach(tab => {
-    tab.style.display = "none";
-  });
+window.addEventListener("DOMContentLoaded", () => {
 
-  document.getElementById(tabId).style.display = "block";
+  function showTab(tabId) {
+    document.querySelectorAll(".tab").forEach(tab => {
+      tab.style.display = "none";
+    });
 
-  // active button style
-  document.querySelectorAll(".tab-btn").forEach(btn => {
-    btn.classList.remove("bg-blue-500", "text-white");
-    btn.classList.add("bg-white");
-  });
-
-  const active = document.querySelector(`[data-tab="${tabId}"]`);
-  if (active) {
-    active.classList.add("bg-blue-500", "text-white");
-    active.classList.remove("bg-white");
+    const target = document.getElementById(tabId);
+    if (target) target.style.display = "block";
   }
-}
+
+  const buttons = document.querySelectorAll(".tab-btn");
+
+  console.log("Buttons found:", buttons.length); // DEBUG
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      console.log("Clicked:", btn.dataset.tab); // DEBUG
+      showTab(btn.dataset.tab);
+    });
+  });
+
+  // default tab
+  showTab("dashboard");
+});
 
 // =====================
 // INIT TABS

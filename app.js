@@ -71,13 +71,29 @@ async function loadProductList() {
   const { data } = await supabase.from('products').select('*')
 
   productList.innerHTML = ''
+
   data.forEach(p => {
     productList.innerHTML += `
-      <li>
-        ${p.name} - ₱${p.price}
-        <button onclick="editProduct('${p.id}','${p.name}',${p.price},${p.cost})">Edit</button>
-        <button onclick="deleteProduct('${p.id}')">Delete</button>
-      </li>
+      <tr class="border-b hover:bg-gray-50">
+        <td class="p-2">${p.name}</td>
+        <td class="p-2">₱${p.price}</td>
+        <td class="p-2">₱${p.cost}</td>
+        <td class="p-2 text-center space-x-2">
+          
+          <button 
+            onclick="editProduct('${p.id}','${p.name}',${p.price},${p.cost})"
+            class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm">
+            Edit
+          </button>
+
+          <button 
+            onclick="deleteProduct('${p.id}')"
+            class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm">
+            Delete
+          </button>
+
+        </td>
+      </tr>
     `
   })
 }

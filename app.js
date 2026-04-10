@@ -6,17 +6,38 @@ const supabase = window.supabase.createClient(
 let chartInstance;
 
 // ----------------------
-// TAB SYSTEM
+// TAB SYSTEM (FIXED)
 // ----------------------
 function showTab(tab) {
   document.querySelectorAll(".tab").forEach(t => t.classList.add("hidden"));
   document.getElementById(tab).classList.remove("hidden");
+
+  // optional: active button highlight
+  document.querySelectorAll(".tab-btn").forEach(b => {
+    b.classList.remove("bg-blue-500", "text-white");
+    b.classList.add("bg-white");
+  });
+
+  const activeBtn = document.querySelector(`[data-tab="${tab}"]`);
+  if (activeBtn) {
+    activeBtn.classList.add("bg-blue-500", "text-white");
+    activeBtn.classList.remove("bg-white");
+  }
 }
 
+// ----------------------
+// INIT TABS (SAFE BINDING)
+// ----------------------
 function initTabs() {
-  document.querySelectorAll(".tab-btn").forEach(btn => {
+  const buttons = document.querySelectorAll(".tab-btn");
+
+  console.log("Tab buttons found:", buttons.length); // DEBUG
+
+  buttons.forEach(btn => {
     btn.addEventListener("click", () => {
-      showTab(btn.dataset.tab);
+      const tab = btn.dataset.tab;
+      console.log("Switching to:", tab); // DEBUG
+      showTab(tab);
     });
   });
 
@@ -24,13 +45,15 @@ function initTabs() {
 }
 
 // ----------------------
-// INIT EVENTS
+// INIT APP
 // ----------------------
-function initEvents() {
-  document.getElementById("addBtn").addEventListener("click", addProduct);
-  document.getElementById("sellBtn").addEventListener("click", sellProduct);
-}
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("App loaded");
 
+  initTabs();
+  initEvents();
+  fetchData();
+});
 // ----------------------
 // ADD PRODUCT
 // ----------------------

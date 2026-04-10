@@ -9,25 +9,36 @@
 </head>
 
 <body class="bg-gray-100">
-<div class="flex h-screen">
+
+<!-- MOBILE HEADER -->
+<div class="md:hidden bg-gray-800 text-white p-4 flex justify-between">
+  <h1 class="font-bold">NANA BITES</h1>
+  <button onclick="toggleSidebar()">☰</button>
+</div>
+
+<div class="flex h-screen overflow-hidden">
 
   <!-- SIDEBAR -->
-  <div class="w-64 bg-gray-800 text-white p-4 space-y-3">
-    <h1 class="text-lg font-bold mb-4">NANA BITES</h1>
-    <button onclick="showTab('dashboard')" class="w-full p-2 hover:bg-gray-700">Dashboard</button>
-    <button onclick="showTab('sales')" class="w-full p-2 hover:bg-gray-700">Sales</button>
-    <button onclick="showTab('inventory')" class="w-full p-2 hover:bg-gray-700">Inventory</button>
-    <button onclick="showTab('expenses')" class="w-full p-2 hover:bg-gray-700">Expenses</button>
+  <div id="sidebar"
+    class="fixed md:static z-50 bg-gray-800 text-white w-64 p-4 space-y-3 transform -translate-x-full md:translate-x-0 transition duration-200">
+
+    <h1 class="text-lg font-bold mb-4 hidden md:block">NANA BITES</h1>
+
+    <button onclick="showTab('dashboard')" class="w-full p-2 hover:bg-gray-700 rounded">Dashboard</button>
+    <button onclick="showTab('sales')" class="w-full p-2 hover:bg-gray-700 rounded">Sales</button>
+    <button onclick="showTab('inventory')" class="w-full p-2 hover:bg-gray-700 rounded">Inventory</button>
+    <button onclick="showTab('expenses')" class="w-full p-2 hover:bg-gray-700 rounded">Expenses</button>
   </div>
 
   <!-- MAIN -->
-  <div class="flex-1 p-6 overflow-auto">
+  <div class="flex-1 p-4 md:p-6 overflow-auto w-full">
 
     <!-- DASHBOARD -->
     <div id="dashboard" class="tab">
-      <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
+      <h1 class="text-xl md:text-2xl font-bold mb-4">Dashboard</h1>
 
-      <div class="grid grid-cols-4 gap-4 mb-6">
+      <!-- RESPONSIVE GRID -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
         <div class="bg-white p-4 rounded shadow">
           <p>Total Sales</p>
           <h2 id="totalSales">0</h2>
@@ -51,66 +62,82 @@
 
     <!-- SALES -->
     <div id="sales" class="tab hidden">
-      <h1 class="text-2xl font-bold mb-4">Sales</h1>
+      <h1 class="text-xl md:text-2xl font-bold mb-4">Sales</h1>
 
-      <select id="productSelect" class="border p-2 mr-2"></select>
-      <select id="flavorSelect" class="border p-2 mr-2"></select>
-      <input id="saleQty" type="number" placeholder="Qty" class="border p-2 mr-2"/>
-
-      <button onclick="addSale()" class="bg-green-500 text-white px-4 py-2 rounded">
-        Add Sale
-      </button>
+      <div class="flex flex-col md:flex-row gap-2">
+        <select id="productSelect" class="border p-2 w-full"></select>
+        <select id="flavorSelect" class="border p-2 w-full"></select>
+        <input id="saleQty" type="number" placeholder="Qty" class="border p-2 w-full"/>
+        <button onclick="addSale()" class="bg-green-500 text-white px-4 py-2 rounded w-full md:w-auto">
+          Add Sale
+        </button>
+      </div>
 
       <ul id="salesList" class="mt-4"></ul>
     </div>
 
     <!-- INVENTORY -->
     <div id="inventory" class="tab hidden">
-      <h1 class="text-2xl font-bold mb-4">Inventory</h1>
+      <h1 class="text-xl md:text-2xl font-bold mb-4">Inventory</h1>
 
       <!-- INGREDIENTS -->
       <h2 class="font-bold">Ingredients</h2>
-      <input id="ingredientName" placeholder="Name" class="border p-2"/>
-      <input id="ingredientPrice" type="number" placeholder="Price" class="border p-2"/>
-      <button onclick="addIngredient()" class="bg-blue-500 text-white px-4 py-2 rounded">
-        Add
-      </button>
+
+      <div class="flex flex-col md:flex-row gap-2">
+        <input id="ingredientName" placeholder="Name" class="border p-2 w-full"/>
+        <input id="ingredientPrice" type="number" placeholder="Price" class="border p-2 w-full"/>
+        <button onclick="addIngredient()" class="bg-blue-500 text-white px-4 py-2 rounded">
+          Add
+        </button>
+      </div>
 
       <ul id="ingredientList" class="mt-4"></ul>
 
       <!-- PRODUCTS -->
       <h2 class="font-bold mt-6">Products</h2>
-      <input id="productName" placeholder="Name" class="border p-2"/>
-      <input id="productPrice" type="number" placeholder="Price" class="border p-2"/>
-      <input id="productCost" type="number" placeholder="Cost" class="border p-2"/>
 
-      <button onclick="addProduct()" class="bg-purple-500 text-white px-4 py-2 rounded">
-        Add Product
-      </button>
+      <div class="flex flex-col md:flex-row gap-2">
+        <input id="productName" placeholder="Name" class="border p-2 w-full"/>
+        <input id="productPrice" type="number" placeholder="Price" class="border p-2 w-full"/>
+        <input id="productCost" type="number" placeholder="Cost" class="border p-2 w-full"/>
+      </div>
 
-      <button onclick="updateProduct()" class="bg-yellow-500 text-white px-4 py-2 rounded">
-        Update
-      </button>
+      <div class="flex gap-2 mt-2">
+        <button onclick="addProduct()" class="bg-purple-500 text-white px-4 py-2 rounded w-full">
+          Add Product
+        </button>
+        <button onclick="updateProduct()" class="bg-yellow-500 text-white px-4 py-2 rounded w-full">
+          Update
+        </button>
+      </div>
 
       <ul id="productList" class="mt-4"></ul>
     </div>
 
     <!-- EXPENSES -->
     <div id="expenses" class="tab hidden">
-      <h1 class="text-2xl font-bold mb-4">Expenses</h1>
+      <h1 class="text-xl md:text-2xl font-bold mb-4">Expenses</h1>
 
-      <input id="expenseName" placeholder="Name" class="border p-2"/>
-      <input id="expenseAmount" type="number" placeholder="Amount" class="border p-2"/>
-
-      <button onclick="addExpense()" class="bg-red-500 text-white px-4 py-2 rounded">
-        Add Expense
-      </button>
+      <div class="flex flex-col md:flex-row gap-2">
+        <input id="expenseName" placeholder="Name" class="border p-2 w-full"/>
+        <input id="expenseAmount" type="number" placeholder="Amount" class="border p-2 w-full"/>
+        <button onclick="addExpense()" class="bg-red-500 text-white px-4 py-2 rounded">
+          Add Expense
+        </button>
+      </div>
 
       <ul id="expenseList" class="mt-4"></ul>
     </div>
 
   </div>
 </div>
+
+<script>
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar')
+  sidebar.classList.toggle('-translate-x-full')
+}
+</script>
 
 <script type="module" src="app.js"></script>
 </body>

@@ -1,13 +1,18 @@
 
+// ✅ IMPORT FIRST
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
 
-// ✅ FIX: define FIRST before using
+// ✅ DEFINE FIRST
 const supabaseUrl = 'https://hxvaxyuvjxydeajnqmyr.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4dmF4eXV2anh5ZGVham5xbXlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3NTU5MzMsImV4cCI6MjA5MTMzMTkzM30.e2g9aVJFjuOJdEa1dfqwIk3rr-VzN6Fp9DJjFClPcAE'
 
+// ✅ THEN CREATE CLIENT
 const supabase = createClient(supabaseUrl, supabaseKey)
 
-// ✅ GLOBAL FUNCTIONS (for buttons)
+// ✅ TEST (IMPORTANT)
+console.log("Supabase loaded:", supabase)
+
+// ================= GLOBAL FUNCTIONS =================
 window.showTab = function(tab) {
   document.querySelectorAll('.tab').forEach(t => t.classList.add('hidden'))
   document.getElementById(tab).classList.remove('hidden')
@@ -19,7 +24,6 @@ window.addItem = async function() {
   const qty = document.getElementById('itemQty').value
 
   const { error } = await supabase.from('inventory').insert([{ name, qty }])
-
   if (error) return console.error(error)
 
   loadInventory()
@@ -27,7 +31,6 @@ window.addItem = async function() {
 
 async function loadInventory() {
   const { data, error } = await supabase.from('inventory').select('*')
-
   if (error) return console.error(error)
 
   const list = document.getElementById('inventoryList')
@@ -46,7 +49,6 @@ window.addSale = async function() {
   const amount = document.getElementById('saleAmount').value
 
   const { error } = await supabase.from('sales').insert([{ item, amount }])
-
   if (error) return console.error(error)
 
   loadSales()
@@ -55,7 +57,6 @@ window.addSale = async function() {
 
 async function loadSales() {
   const { data, error } = await supabase.from('sales').select('*')
-
   if (error) return console.error(error)
 
   const list = document.getElementById('salesList')
@@ -68,12 +69,11 @@ async function loadSales() {
   })
 }
 
-// ================= DASHBOARD =================
+// ================= CHART =================
 let chart
 
 async function loadChart() {
   const { data, error } = await supabase.from('sales').select('*')
-
   if (error) return console.error(error)
 
   const labels = data.map(s => s.item)
@@ -86,7 +86,7 @@ async function loadChart() {
   chart = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: labels,
+      labels,
       datasets: [{
         label: 'Sales',
         data: values
@@ -97,6 +97,7 @@ async function loadChart() {
 
 // ================= INIT =================
 window.addEventListener('DOMContentLoaded', () => {
+  console.log("App loaded ✅")
   loadInventory()
   loadSales()
   loadChart()

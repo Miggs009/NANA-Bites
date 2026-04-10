@@ -1,112 +1,117 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nana Bites POS System</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="bg-gray-100">
+<div class="flex h-screen">
 
-  <div class="flex h-screen">
-
-    <!-- SIDEBAR -->
-    <div class="w-64 bg-gray-800 text-white p-4 space-y-3">
-      <h1 class="text-lg font-bold mb-4">NANA BITES</h1>
-
-      <button onclick="showTab('dashboard')" class="w-full text-left p-2 hover:bg-gray-700 rounded">Dashboard</button>
-      <button onclick="showTab('sales')" class="w-full text-left p-2 hover:bg-gray-700 rounded">Sales</button>
-      <button onclick="showTab('inventory')" class="w-full text-left p-2 hover:bg-gray-700 rounded">Inventory</button>
-      <button onclick="showTab('expenses')" class="w-full text-left p-2 hover:bg-gray-700 rounded">Expenses</button>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div class="flex-1 p-6 overflow-auto">
-
-      <!-- DASHBOARD -->
-      <div id="dashboard" class="tab">
-        <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
-
-        <!-- STATS CARDS -->
-        <div class="grid grid-cols-4 gap-4 mb-6">
-          <div class="bg-white p-4 rounded shadow">
-            <p class="text-gray-500">Total Sales</p>
-            <h2 id="totalSales" class="text-xl font-bold">0</h2>
-          </div>
-          <div class="bg-white p-4 rounded shadow">
-            <p class="text-gray-500">Total Cost</p>
-            <h2 id="totalCost" class="text-xl font-bold">0</h2>
-          </div>
-          <div class="bg-white p-4 rounded shadow">
-            <p class="text-gray-500">Profit</p>
-            <h2 id="totalProfit" class="text-xl font-bold">0</h2>
-          </div>
-          <div class="bg-white p-4 rounded shadow">
-            <p class="text-gray-500">Expenses</p>
-            <h2 id="totalExpenses" class="text-xl font-bold">0</h2>
-          </div>
-        </div>
-
-        <canvas id="salesChart"></canvas>
-      </div>
-
-      <!-- SALES -->
-      <div id="sales" class="tab hidden">
-        <h1 class="text-2xl font-bold mb-4">Sales</h1>
-
-        <!-- PRODUCT SELECT -->
-        <select id="productSelect" class="border p-2 mr-2">
-          <option value="">Select Product</option>
-        </select>
-
-        <!-- FLAVOR SELECT -->
-        <select id="flavorSelect" class="border p-2 mr-2">
-          <option value="">No Flavor</option>
-        </select>
-
-        <input id="saleQty" type="number" placeholder="Quantity" class="border p-2 mr-2" />
-
-        <button onclick="addSale()" class="bg-green-500 text-white px-4 py-2 rounded">
-          Add Sale
-        </button>
-
-        <ul id="salesList" class="mt-4"></ul>
-      </div>
-
-      <!-- INVENTORY (INGREDIENTS) -->
-      <div id="inventory" class="tab hidden">
-        <h1 class="text-2xl font-bold mb-4">Ingredients Costing</h1>
-
-        <input id="ingredientName" placeholder="Ingredient" class="border p-2 mr-2" />
-        <input id="ingredientPrice" type="number" placeholder="Price" class="border p-2 mr-2" />
-        <button onclick="addIngredient()" class="bg-blue-500 text-white px-4 py-2 rounded">
-          Add Ingredient
-        </button>
-
-        <ul id="ingredientList" class="mt-4"></ul>
-      </div>
-
-      <!-- EXPENSES -->
-      <div id="expenses" class="tab hidden">
-        <h1 class="text-2xl font-bold mb-4">Expenses</h1>
-
-        <input id="expenseName" placeholder="Expense Name" class="border p-2 mr-2" />
-        <input id="expenseAmount" type="number" placeholder="Amount" class="border p-2 mr-2" />
-
-        <button onclick="addExpense()" class="bg-red-500 text-white px-4 py-2 rounded">
-          Add Expense
-        </button>
-
-        <ul id="expenseList" class="mt-4"></ul>
-      </div>
-
-    </div>
+  <!-- SIDEBAR -->
+  <div class="w-64 bg-gray-800 text-white p-4 space-y-3">
+    <h1 class="text-lg font-bold mb-4">NANA BITES</h1>
+    <button onclick="showTab('dashboard')" class="w-full p-2 hover:bg-gray-700">Dashboard</button>
+    <button onclick="showTab('sales')" class="w-full p-2 hover:bg-gray-700">Sales</button>
+    <button onclick="showTab('inventory')" class="w-full p-2 hover:bg-gray-700">Inventory</button>
+    <button onclick="showTab('expenses')" class="w-full p-2 hover:bg-gray-700">Expenses</button>
   </div>
 
-  <script type="module" src="app.js"></script>
+  <!-- MAIN -->
+  <div class="flex-1 p-6 overflow-auto">
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="tab">
+      <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
+
+      <div class="grid grid-cols-4 gap-4 mb-6">
+        <div class="bg-white p-4 rounded shadow">
+          <p>Total Sales</p>
+          <h2 id="totalSales">0</h2>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <p>Total Cost</p>
+          <h2 id="totalCost">0</h2>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <p>Profit</p>
+          <h2 id="totalProfit">0</h2>
+        </div>
+        <div class="bg-white p-4 rounded shadow">
+          <p>Expenses</p>
+          <h2 id="totalExpenses">0</h2>
+        </div>
+      </div>
+
+      <canvas id="salesChart"></canvas>
+    </div>
+
+    <!-- SALES -->
+    <div id="sales" class="tab hidden">
+      <h1 class="text-2xl font-bold mb-4">Sales</h1>
+
+      <select id="productSelect" class="border p-2 mr-2"></select>
+      <select id="flavorSelect" class="border p-2 mr-2"></select>
+      <input id="saleQty" type="number" placeholder="Qty" class="border p-2 mr-2"/>
+
+      <button onclick="addSale()" class="bg-green-500 text-white px-4 py-2 rounded">
+        Add Sale
+      </button>
+
+      <ul id="salesList" class="mt-4"></ul>
+    </div>
+
+    <!-- INVENTORY -->
+    <div id="inventory" class="tab hidden">
+      <h1 class="text-2xl font-bold mb-4">Inventory</h1>
+
+      <!-- INGREDIENTS -->
+      <h2 class="font-bold">Ingredients</h2>
+      <input id="ingredientName" placeholder="Name" class="border p-2"/>
+      <input id="ingredientPrice" type="number" placeholder="Price" class="border p-2"/>
+      <button onclick="addIngredient()" class="bg-blue-500 text-white px-4 py-2 rounded">
+        Add
+      </button>
+
+      <ul id="ingredientList" class="mt-4"></ul>
+
+      <!-- PRODUCTS -->
+      <h2 class="font-bold mt-6">Products</h2>
+      <input id="productName" placeholder="Name" class="border p-2"/>
+      <input id="productPrice" type="number" placeholder="Price" class="border p-2"/>
+      <input id="productCost" type="number" placeholder="Cost" class="border p-2"/>
+
+      <button onclick="addProduct()" class="bg-purple-500 text-white px-4 py-2 rounded">
+        Add Product
+      </button>
+
+      <button onclick="updateProduct()" class="bg-yellow-500 text-white px-4 py-2 rounded">
+        Update
+      </button>
+
+      <ul id="productList" class="mt-4"></ul>
+    </div>
+
+    <!-- EXPENSES -->
+    <div id="expenses" class="tab hidden">
+      <h1 class="text-2xl font-bold mb-4">Expenses</h1>
+
+      <input id="expenseName" placeholder="Name" class="border p-2"/>
+      <input id="expenseAmount" type="number" placeholder="Amount" class="border p-2"/>
+
+      <button onclick="addExpense()" class="bg-red-500 text-white px-4 py-2 rounded">
+        Add Expense
+      </button>
+
+      <ul id="expenseList" class="mt-4"></ul>
+    </div>
+
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
 </body>
 </html>

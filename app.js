@@ -182,10 +182,10 @@ async function loadDashboard() {
   const totalProfit = sales.reduce((a, b) => a + Number(b.profit), 0)
   const totalExpenses = expenses.reduce((a, b) => a + Number(b.amount), 0)
 
-  totalSalesEl.textContent = totalSales
-  totalCostEl.textContent = totalCost
-  totalProfitEl.textContent = totalProfit
-  totalExpensesEl.textContent = totalExpenses
+  document.getElementById('totalSales').textContent = totalSales
+  document.getElementById('totalCost').textContent = totalCost
+  document.getElementById('totalProfit').textContent = totalProfit
+  document.getElementById('totalExpenses').textContent = totalExpenses
 
   renderChart(sales)
 }

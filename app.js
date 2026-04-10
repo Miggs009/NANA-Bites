@@ -6,6 +6,10 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
 const supabaseUrl = 'https://hxvaxyuvjxydeajnqmyr.supabase.co'
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh4dmF4eXV2anh5ZGVham5xbXlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU3NTU5MzMsImV4cCI6MjA5MTMzMTkzM30.e2g9aVJFjuOJdEa1dfqwIk3rr-VzN6Fp9DJjFClPcAE'
 
+const supabase = createClient(supabaseUrl, supabaseKey)
+
+// ✅ MAKE IT GLOBAL (IMPORTANT FIX)
+window.supabase = supabase
 // TAB
 window.showTab = function(tab) {
   document.querySelectorAll('.tab').forEach(t => t.classList.add('hidden'))

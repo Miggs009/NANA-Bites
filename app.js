@@ -10,6 +10,11 @@ const supabase = createClient(supabaseUrl, supabaseKey)
 
 // ✅ MAKE IT GLOBAL (IMPORTANT FIX)
 window.supabase = supabase
+
+let selectedProductId = null
+let selectedProductPrice = 0
+let editingIngredientId = null
+
 // TAB
 window.showTab = function(tab) {
   document.querySelectorAll('.tab').forEach(t => t.classList.add('hidden'))
@@ -19,9 +24,6 @@ window.showTab = function(tab) {
 // INIT
 window.addEventListener('DOMContentLoaded', () => {
   loadProducts()
-  loadFlavors()
-  loadIngredients()
-  loadExpenses()
   loadSales()
   loadDashboard()
   loadProductList()
@@ -30,32 +32,35 @@ window.addEventListener('DOMContentLoaded', () => {
 // ================= PRODUCTS =================
 
 window.addProduct = async () => {
-  const name = productName.value
-  const price = productPrice.value
-  const cost = productCost.value
+  await supabase.from('products').insert([{
+    name: productName.value,
+    price: productPrice.value
+  }])
 
-  await supabase.from('products').insert([{ name, price, cost }])
+  productName.value = ''
+  productPrice.value = ''
 
-  loadProducts()
   loadProductList()
+  loadProducts()
 }
 
-window.editProduct = (id, name, price, cost) => {
+window.editProduct = (id, name, price) => {
   productName.value = name
   productPrice.value = price
-  productCost.value = cost
   window.editingId = id
 }
 
 window.updateProduct = async () => {
-  await supabase
-    .from('products')
+  await supabase.from('products')
     .update({
       name: productName.value,
-      price: productPrice.value,
-      cost: productCost.value
+      price: productPrice.value
     })
     .eq('id', window.editingId)
+
+  productName.value = ''
+  productPrice.value = ''
+  window.editingId = null
 
   loadProductList()
   loadProducts()
@@ -64,41 +69,139 @@ window.updateProduct = async () => {
 window.deleteProduct = async (id) => {
   await supabase.from('products').delete().eq('id', id)
   loadProductList()
-  loadProducts()
 }
 
+// SELECT PRODUCT
+window.selectProduct = async (id, name, price) => {
+  selectedProductId = id
+  selectedProductPrice = price
+
+  productTitle.textContent = name
+  document.getElementById('productDetails').classList.remove('hidden')
+
+  loadIngredients()
+}
+
+// TABLE
 async function loadProductList() {
   const { data } = await supabase.from('products').select('*')
 
   productList.innerHTML = ''
 
-  data.forEach(p => {
+  for (let p of data) {
+    const cost = await getProductCost(p.id)
+    const profit = p.price - cost
+
     productList.innerHTML += `
-      <tr class="border-b hover:bg-gray-50">
+      <tr>
         <td class="p-2">${p.name}</td>
         <td class="p-2">₱${p.price}</td>
-        <td class="p-2">₱${p.cost}</td>
-        <td class="p-2 text-center space-x-2">
-          
-          <button 
-            onclick="editProduct('${p.id}','${p.name}',${p.price},${p.cost})"
-            class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm">
-            Edit
-          </button>
+        <td class="p-2">₱${cost}</td>
+        <td class="p-2">₱${profit}</td>
+        <td class="p-2 space-x-2">
+          <button onclick="selectProduct('${p.id}','${p.name}',${p.price})" class="bg-green-500 text-white px-2 py-1 rounded">View Ingredients</button>
+          <button onclick="editProduct('${p.id}','${p.name}',${p.price})" class="bg-blue-500 text-white px-2 py-1 rounded">Edit</button>
+          <button onclick="deleteProduct('${p.id}')" class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
+        </td>
+      </tr>
+    `
+  }
+}
 
-          <button 
-            onclick="deleteProduct('${p.id}')"
-            class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm">
-            Delete
-          </button>
+// ================= COST =================
 
+async function getProductCost(productId) {
+  const { data } = await supabase
+    .from('ingredients')
+    .select('cost')
+    .eq('product_id', productId)
+
+  return data.reduce((sum, i) => sum + Number(i.cost), 0)
+}
+
+// ================= INGREDIENTS =================
+
+// ADD / UPDATE
+window.addIngredient = async () => {
+
+  if (!selectedProductId) return alert("Select a product first")
+
+  if (editingIngredientId) {
+    // UPDATE
+    await supabase
+      .from('ingredients')
+      .update({
+        name: ingredientName.value,
+        cost: ingredientCost.value
+      })
+      .eq('id', editingIngredientId)
+
+    editingIngredientId = null
+    document.getElementById('ingredientBtn').textContent = "Add"
+
+  } else {
+    // INSERT
+    await supabase.from('ingredients').insert([{
+      name: ingredientName.value,
+      cost: ingredientCost.value,
+      product_id: selectedProductId
+    }])
+  }
+
+  ingredientName.value = ''
+  ingredientCost.value = ''
+
+  loadIngredients()
+}
+
+// EDIT
+window.editIngredient = (id, name, cost) => {
+  ingredientName.value = name
+  ingredientCost.value = cost
+  editingIngredientId = id
+
+  document.getElementById('ingredientBtn').textContent = "Update"
+}
+
+// DELETE
+window.deleteIngredient = async (id) => {
+  await supabase.from('ingredients').delete().eq('id', id)
+  loadIngredients()
+}
+
+// LOAD
+async function loadIngredients() {
+  const { data } = await supabase
+    .from('ingredients')
+    .select('*')
+    .eq('product_id', selectedProductId)
+
+  ingredientList.innerHTML = ''
+
+  let total = 0
+
+  data.forEach(i => {
+    total += Number(i.cost)
+
+    ingredientList.innerHTML += `
+      <tr>
+        <td class="p-2">${i.name}</td>
+        <td class="p-2">₱${i.cost}</td>
+        <td class="p-2 space-x-2">
+          <button onclick="editIngredient('${i.id}','${i.name}',${i.cost})"
+            class="bg-blue-500 text-white px-2 py-1 rounded">Edit</button>
+          <button onclick="deleteIngredient('${i.id}')"
+            class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
         </td>
       </tr>
     `
   })
+
+  totalCostView.textContent = total
+  profitView.textContent = selectedProductPrice - total
 }
 
-// ================= DROPDOWNS =================
+// ================= SALES =================
 
 async function loadProducts() {
   const { data } = await supabase.from('products').select('*')
@@ -109,21 +212,9 @@ async function loadProducts() {
   })
 }
 
-async function loadFlavors() {
-  const { data } = await supabase.from('flavors').select('*')
-
-  flavorSelect.innerHTML = `<option value="">No Flavor</option>`
-  data.forEach(f => {
-    flavorSelect.innerHTML += `<option value="${f.id}">${f.name} (+${f.extra_cost})</option>`
-  })
-}
-
-// ================= SALES =================
-
 window.addSale = async () => {
   await supabase.rpc('make_sale', {
     p_product_id: productSelect.value,
-    p_flavor_id: flavorSelect.value || null,
     p_quantity: parseInt(saleQty.value)
   })
 
@@ -139,49 +230,7 @@ async function loadSales() {
 
   salesList.innerHTML = ''
   data.forEach(s => {
-    salesList.innerHTML += `
-      <li>
-        ${s.products?.name} | Qty: ${s.quantity} | Profit: ${s.profit}
-      </li>
-    `
-  })
-}
-
-// ================= INGREDIENTS =================
-
-window.addIngredient = async () => {
-  await supabase.from('ingredients').insert([
-    { name: ingredientName.value, price: ingredientPrice.value }
-  ])
-  loadIngredients()
-}
-
-async function loadIngredients() {
-  const { data } = await supabase.from('ingredients').select('*')
-
-  ingredientList.innerHTML = ''
-  data.forEach(i => {
-    ingredientList.innerHTML += `<li>${i.name} - ₱${i.price}</li>`
-  })
-}
-
-// ================= EXPENSES =================
-
-window.addExpense = async () => {
-  await supabase.from('expenses').insert([
-    { name: expenseName.value, amount: expenseAmount.value }
-  ])
-
-  loadExpenses()
-  loadDashboard()
-}
-
-async function loadExpenses() {
-  const { data } = await supabase.from('expenses').select('*')
-
-  expenseList.innerHTML = ''
-  data.forEach(e => {
-    expenseList.innerHTML += `<li>${e.name} - ₱${e.amount}</li>`
+    salesList.innerHTML += `<li>${s.products?.name} | Qty: ${s.quantity}</li>`
   })
 }
 
@@ -190,24 +239,20 @@ async function loadExpenses() {
 let chart
 
 async function loadDashboard() {
-  const { data: sales } = await supabase.from('sales').select('*')
-  const { data: expenses } = await supabase.from('expenses').select('*')
+  const { data } = await supabase.from('sales').select('*')
 
-  const totalSales = sales.reduce((a, b) => a + Number(b.total_amount), 0)
-  const totalCost = sales.reduce((a, b) => a + Number(b.total_cost), 0)
-  const totalProfit = sales.reduce((a, b) => a + Number(b.profit), 0)
-  const totalExpenses = expenses.reduce((a, b) => a + Number(b.amount), 0)
+  const totalSalesVal = data.reduce((a, b) => a + Number(b.total_amount), 0)
+  const totalCostVal = data.reduce((a, b) => a + Number(b.total_cost), 0)
+  const totalProfitVal = data.reduce((a, b) => a + Number(b.profit), 0)
 
-  document.getElementById('totalSales').textContent = totalSales
-  document.getElementById('totalCost').textContent = totalCost
-  document.getElementById('totalProfit').textContent = totalProfit
-  document.getElementById('totalExpenses').textContent = totalExpenses
+  document.getElementById('totalSales').textContent = totalSalesVal
+  document.getElementById('totalCost').textContent = totalCostVal
+  document.getElementById('totalProfit').textContent = totalProfitVal
 
-  renderChart(sales)
+  renderChart(data)
 }
 
-// ================= CHART =================
-
+// CHART
 function renderChart(sales) {
   const ctx = document.getElementById('salesChart')
 

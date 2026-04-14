@@ -115,7 +115,7 @@ async function loadProductList(){
         <td class="p-3">₱${cost.toFixed(2)}</td>
         <td class="p-3 text-blue-600 font-bold">₱${profit.toFixed(2)}</td>
         <td class="p-3 space-x-2">
-          <button onclick="selectProduct('${p.id}','${p.name}',${p.price})" class="bg-green-500 px-2 text-white rounded">View</button>
+          <button onclick="selectProduct('${p.id}','${p.name}',${p.price})" class="bg-green-500 px-2 text-white rounded">Ingredients & Expense</button>
           <button onclick="editProduct('${p.id}','${p.name}',${p.price})" class="bg-blue-500 px-2 text-white rounded">Edit</button>
           <button onclick="deleteProduct('${p.id}')" class="bg-red-500 px-2 text-white rounded">Delete</button>
         </td>
@@ -157,7 +157,7 @@ async function loadStockOptions(){
     return
   }
 
-  stockSelect.innerHTML = `<option value="">Select stock</option>`
+  stockSelect.innerHTML = `<option value="">Select Material in stock</option>`
 
   ;(data || []).forEach(s=>{
     const costPerPiece = s.qty > 0 ? (s.cost_per_unit / s.qty) : 0

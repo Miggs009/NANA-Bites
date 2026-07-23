@@ -1,175 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nana Bites POS</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Work Board Reviewer</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body class="bg-gray-100">
+    <div class="container">
 
-<div class="flex h-screen overflow-hidden">
+        <!-- Header -->
+        <header>
 
-      <!-- MOBILE TOP BAR -->
-    <div class="md:hidden flex items-center justify-between bg-gray-800 text-white p-4">
-      <h1 class="font-bold">NANA BITES</h1>
-      <button onclick="toggleSidebar()">☰</button>
-    </div>
+            <h1>📚 Social Work Board Reviewer</h1>
 
-    <!-- SIDEBAR -->
-    <div id="sidebar"
-      class="fixed md:relative z-50 md:z-auto top-0 left-0 h-full w-64 bg-gray-800 text-white p-4 space-y-3 transform -translate-x-full md:translate-x-0 transition-transform duration-300">
+            <p>100 Multiple Choice Flashcards</p>
 
-      <h1 class="text-lg font-bold mb-4 hidden md:block">NANA BITES</h1>
+        </header>
 
-      <button onclick="showTab('dashboard'); closeSidebar()" class="w-full p-2 hover:bg-gray-700">Dashboard</button>
-      <button onclick="showTab('sales'); closeSidebar()" class="w-full p-2 hover:bg-gray-700">Sales</button>
-      <button onclick="showTab('products'); closeSidebar()" class="w-full p-2 hover:bg-gray-700">Products</button>
-      <button onclick="showTab('stock'); closeSidebar()" class="w-full p-2 hover:bg-gray-700">Stock</button>
-    </div>
+        <!-- Progress -->
+        <div class="progress-container">
 
-  <!-- MAIN -->
-  <div class="flex-1 p-4 md:p-6 overflow-auto w-full">
+            <div class="progress-info">
 
-    <!-- DASHBOARD -->
-    <div id="dashboard" class="tab">
-      <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
+                <span id="questionNumber">
+                    Question 1 of 100
+                </span>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-        <div class="bg-white p-4 rounded shadow">
-          <p>Total Sales</p>
-          <h2 id="totalSales">0</h2>
-        </div>
-        <div class="bg-white p-4 rounded shadow">
-          <p>Total Cost</p>
-          <h2 id="totalCost">0</h2>
-        </div>
-        <div class="bg-white p-4 rounded shadow">
-          <p>Profit</p>
-          <h2 id="totalProfit">0</h2>
-        </div>
-      </div>
+                <span id="scoreDisplay">
+                    Score: 0
+                </span>
 
-      <canvas id="salesChart"></canvas>
-    </div>
-
-    <!-- SALES -->
-    <div id="sales" class="tab hidden">
-      <h1 class="text-2xl font-bold mb-4">Sales</h1>
-
-      <div class="flex flex-col md:flex-row gap-2 mb-4">
-        <select id="productSelect" class="border p-2 w-full"></select>
-        <input id="saleQty" type="number" placeholder="Qty" class="border p-2 w-full"/>
-        <select id="saleType" class="border p-2 w-full">
-          <option value="piece">Per Piece</option>
-          <option value="box2">Box of 2</option>
-          <option value="box4">Box of 4</option>
-        </select>
-        <button onclick="addOrUpdateSale()" class="bg-green-500 text-white px-4 py-2 rounded">
-          Save
-        </button>
-      </div>
-
-      <div class="overflow-x-auto">
-        <table class="min-w-full bg-white rounded shadow">
-          <thead class="bg-gray-200">
-            <tr>
-              <th class="p-3">Product</th>
-              <th class="p-3">Qty</th>
-              <th class="p-3">Total</th>
-              <th class="p-3">Cost</th>
-              <th class="p-3">Profit</th>
-              <th class="p-3">Actions</th>
-            </tr>
-          </thead>
-          <tbody id="salesList"></tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- PRODUCTS -->
-    <div id="products" class="tab hidden">
-      <h1 class="text-2xl font-bold mb-4">Products</h1>
-
-      <div class="flex flex-col md:flex-row gap-2 mb-4">
-        <input id="productName" placeholder="Name" class="border p-2 w-full"/>
-        <input id="productPrice" type="number" placeholder="Selling Price" class="border p-2 w-full"/>
-      </div>
-
-      <div class="flex gap-2 mb-4">
-        <button onclick="addProduct()" class="bg-purple-500 text-white px-4 py-2 rounded w-full">Add</button>
-        <button onclick="updateProduct()" class="bg-yellow-500 text-white px-4 py-2 rounded w-full">Update</button>
-      </div>
-
-      <table class="min-w-full bg-white rounded shadow">
-        <thead class="bg-gray-200">
-          <tr>
-            <th class="p-3">Name</th>
-            <th class="p-3">Price</th>
-            <th class="p-3">Cost</th>
-            <th class="p-3">Profit</th>
-            <th class="p-3">Actions</th>
-          </tr>
-        </thead>
-        <tbody id="productList"></tbody>
-      </table>
-
-      <!-- INGREDIENTS -->
-      <div id="productDetails" class="hidden mt-6">
-        <h2 id="productTitle" class="text-xl font-bold mb-2"></h2>
-
-        <div class="flex gap-2 mb-2">
-          <input id="ingredientName" placeholder="Ingredient name" class="border p-2 w-full"/>
-          <input id="ingredientCost" type="number" placeholder="Manual cost (optional)" class="border p-2 w-full"/>
-          <select id="stockSelect" class="border p-2 w-full"></select>
-          <input id="usageQty" type="number" placeholder="Usage per product" class="border p-2 w-full"/>
-          <button id="ingredientBtn" onclick="addIngredient()" class="bg-blue-500 text-white px-4 rounded">
-            Add
-          </button>
-        </div>
-
-        <table class="min-w-full bg-white">
-          <tbody id="ingredientList"></tbody>
-        </table>
-
-        <div class="mt-4 font-bold">
-          Cost: ₱<span id="totalCostView">0</span>
-        </div>
-        <div class="font-bold">
-          Profit: ₱<span id="profitView">0</span>
-        </div>
-      </div>
-
-    </div>
-      <!-- STOCKS -->
-          <div id="stock" class="tab hidden">
-            <h1 class="text-2xl font-bold mb-4">Stock</h1>
-
-            <div class="flex gap-2 mb-4">
-              <input id="stockName" placeholder="Item name" class="border p-2 w-full"/>
-              <input id="stockQty" type="number" placeholder="Qty" class="border p-2 w-full"/>
-              <input id="stockCost" type="number" placeholder="Cost per unit" class="border p-2 w-full"/>
-              <button onclick="addStock()" class="bg-green-500 text-white px-4 rounded">Add</button>
             </div>
 
-            <table class="min-w-full bg-white rounded shadow">
-              <thead class="bg-gray-200">
-                <tr>
-                  <th class="p-3">Item</th>
-                  <th class="p-3">Qty</th>
-                  <th class="p-3">Cost</th>
-                  <th class="p-3">Actions</th>
-                </tr>
-              </thead>
-              <tbody id="stockList"></tbody>
-            </table>
-          </div>
-  </div>
-</div>
-          
+            <div class="progress-bar">
 
-<script type="module" src="app.js"></script>
+                <div id="progressFill"></div>
+
+            </div>
+
+        </div>
+
+        <!-- Quiz Card -->
+        <div class="card">
+
+            <h2 id="question">
+                Loading Question...
+            </h2>
+
+            <div id="choices" class="choices">
+
+                <!-- Choices generated by JavaScript -->
+
+            </div>
+
+            <div class="buttons">
+
+                <button id="submitBtn">
+                    Submit Answer
+                </button>
+
+                <button id="nextBtn" disabled>
+                    Next Question →
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Result Section -->
+        <div id="resultScreen" class="hidden">
+
+            <h1>🎉 Quiz Finished!</h1>
+
+            <div class="score-card">
+
+                <h2>Your Score</h2>
+
+                <h1 id="finalScore">
+                    0 / 100
+                </h1>
+
+                <h2 id="percentage">
+                    0%
+                </h2>
+
+                <h3 id="remarks">
+                    Excellent!
+                </h3>
+
+            </div>
+
+            <button id="reviewBtn">
+                Review Answers
+            </button>
+
+            <button onclick="location.reload()">
+                Restart Quiz
+            </button>
+
+        </div>
+
+        <!-- Review Section -->
+        <div id="reviewScreen" class="hidden">
+
+            <h1>📖 Review Answers</h1>
+
+            <div id="reviewContainer">
+
+                <!-- Generated by JavaScript -->
+
+            </div>
+
+            <br>
+
+            <button onclick="location.reload()">
+                Take Quiz Again
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="flashcards.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
+

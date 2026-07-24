@@ -1,7 +1,3 @@
-let currentQuestion = 0;
-let score = 0;
-let userAnswers = [];
-
 // Make a copy of the flashcards
 const quizCards = JSON.parse(JSON.stringify(flashcards));
 

@@ -1,22 +1,6 @@
 // Make a copy of the flashcards
 const quizCards = JSON.parse(JSON.stringify(flashcards));
 
-// Shuffle Function (Fisher-Yates)
-function shuffle(array) {
-
-    for (let i = array.length - 1; i > 0; i--) {
-
-        const j = Math.floor(Math.random() * (i + 1));
-
-        [array[i], array[j]] = [array[j], array[i]];
-
-    }
-
-}
-
-// Shuffle all questions
-shuffle(quizCards);
-
 // Quiz Variables
 let currentQuestion = 0;
 let score = 0;
@@ -57,13 +41,11 @@ function loadQuestion() {
 
     const card = quizCards[currentQuestion];
 
-    // Randomize Choices
+    // NO QUESTION SHUFFLE
+    // Questions will appear in their original order.
 
-    const correctAnswer = card.choices[card.answer];
-
-    shuffle(card.choices);
-
-    card.answer = card.choices.indexOf(correctAnswer);
+    // NO CHOICE SHUFFLE
+    // Choices will appear in their original order.
 
     questionNumber.innerHTML =
         `Question ${currentQuestion + 1} of ${quizCards.length}`;
@@ -379,6 +361,3 @@ reviewBtn.addEventListener("click", function(){
     });
 
 });
-
-
-

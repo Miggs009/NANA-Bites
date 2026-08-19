@@ -80,7 +80,7 @@ const flashcards = [
             "Existing",
             "Key"
         ],
-        answer: 3,
+        answer: 1,
         explanation: "Key sources are significant others in the client's life who can provide relevant information during the information-gathering process."
     },
     {
@@ -109,6 +109,7 @@ const flashcards = [
     },
     {
         number: 10,
+        case: "case1",
         question: "Assigned as Pamela's caseworker, what was the immediate problem of Pamela?",
         choices: [
             "She was a street child",
@@ -121,6 +122,7 @@ const flashcards = [
     },
     {
         number: 11,
+        case: "case1",
         question: "What casework principle should primarily become operative concerning this feedback of the houseparent about Pamela?",
         choices: [
             "Principle of non-judgmental attitude",
@@ -133,6 +135,7 @@ const flashcards = [
     },
     {
         number: 12,
+        case: "case1",
         question: "If you were assigned to handle the case of Pamela, how are you going to establish rapport with her?",
         choices: [
             "Use the technique of small talk",
@@ -145,6 +148,7 @@ const flashcards = [
     },
     {
         number: 13,
+        case: "case1",
         question: "You need collateral information about Pamela concerning her situation prior to admission in the center. Whom will you contact for this purpose?",
         choices: [
             "Pamela's half-brother",
@@ -157,6 +161,7 @@ const flashcards = [
     },
     {
         number: 14,
+        case: "case1",
         question: "What is the appropriate next step to be taken by the social worker to address this situation of Pamela?",
         choices: [
             "Address her unruliness in the center",
@@ -169,6 +174,7 @@ const flashcards = [
     },
     {
         number: 15,
+        case: "case1",
         question: "Termination is usually discussed during this phase of the helping process. The reality of discontinuing the helping relationship often evokes certain feelings and reactions from both worker and client, which must be faced.",
         choices: [
             "Assessment",
@@ -181,6 +187,7 @@ const flashcards = [
     },
     {
         number: 16,
+        case: "case1",
         question: "The following are common principles applied in data collection during the assessment phase. Which of the following is not true?",
         choices: [
             "The client should not be the main source of information, other sources should also be considered initially.",
@@ -193,6 +200,7 @@ const flashcards = [
     },
     {
         number: 17,
+        case: "case1",
         question: "Treatment progress is sometimes quite rapid when working with a client in crisis because the client is:",
         choices: [
             "Best able to develop self-direction",
@@ -205,6 +213,7 @@ const flashcards = [
     },
     {
         number: 18,
+        case: "case1",
         question: "During intake, it is the problem being perceived or experienced by the client, that is a threat to the client's or others' welfare. This may serve as the problem-for-work in a helping relationship.",
         choices: [
             "Working Problem",
@@ -878,6 +887,7 @@ const flashcards = [
     },
     {
         number: 74,
+        case: "case2",
         question: "Marina is a 30-year-old mother of six young children. She is a very religious person. Recently, she gave birth to a baby boy with complications, thus, she was referred by the hospital to your agency to seek help. During the intake interview, Marina also complained about her husband being a drunkard. The husband also wants Marina to have more babies as they are “blessing from heaven”. The social worker therefore strongly advised Marina for the use of pills as a method of contraception, which she herself found very effective in preventing another pregnancy. But Marina is having second thoughts. What principle should the social worker observe in this kind of situation?",
         choices: [
             "Self awareness",
@@ -890,6 +900,7 @@ const flashcards = [
     },
     {
         number: 75,
+        case: "case2",
         question: "In motivating couples to use a family planning method, which of the following interventions is most appropriate?",
         choices: [
             "Family therapy",
@@ -902,6 +913,7 @@ const flashcards = [
     },
         {
         number: 76,
+        case: "case2",
         question: "What would be the most effective point of entry in motivating Marina to practice family planning?",
         choices: [
             "Care of the children",
@@ -914,6 +926,7 @@ const flashcards = [
     },
     {
         number: 77,
+        case: "case2",
         question: "What should be the focus of the social worker in delivering initial interventions for Marina?",
         choices: [
             "Acceptance",
@@ -926,6 +939,7 @@ const flashcards = [
     },
     {
         number: 78,
+        case: "case2",
         question: "In motivating a couple for family planning, the social worker should be knowledgeable and comfortable in discussing with couples the:",
         choices: [
             "Right of a Woman to her own body",
@@ -1010,6 +1024,7 @@ const flashcards = [
     },
     {
         number: 85,
+        case: "case3",
         question: "What basic data do you need in order to assess the child’s social situation?",
         choices: [
             "Psychological test result",
@@ -1022,6 +1037,7 @@ const flashcards = [
     },
     {
         number: 86,
+        case: "case3",
         question: "In working with this client, who should be the primary source of information?",
         choices: [
             "The child",
@@ -1034,6 +1050,7 @@ const flashcards = [
     },
     {
         number: 87,
+        case: "case3",
         question: "When you collect initial information on the child’s current development, what important task of the helping process have you completed?",
         choices: [
             "Data gathering",
@@ -1046,6 +1063,7 @@ const flashcards = [
     },
     {
         number: 88,
+        case: "case3",
         question: "What immediate data do you need to complete an initial assessment on the child’s current level of functioning?",
         choices: [
             "Child’s growth and development",
@@ -1058,6 +1076,7 @@ const flashcards = [
     },
     {
         number: 89,
+        case: "case3",
         question: "Which of the following techniques in data gathering is the most appropriate in working with a three-year-old child?",
         choices: [
             "Use of questions answerable by yes or no",
@@ -1202,3 +1221,42 @@ const flashcards = [
     }
 
 ];
+
+const caseStudies = {
+
+    case1: {
+        title: "Case 1",
+        story: `The report of a houseparent on Pamela, 7 years old,
+        indicated the following information: "She is very unruly in
+        the center, she cannot relate well with her co-clients, very
+        undisciplined in the school, aggressive, and often tells lies
+        and constantly violates the center regulations."
+
+        Pamela, as you know was rescued from the street by your
+        organization. When she was rescued, she disclosed that her
+        father sexually molested her also. That is why she ran away
+        from home. She has a 10-year old half-brother and her mother
+        already had a new partner.`
+    },
+
+    case2: {
+        title: "Case 2",
+        story: `Marina is a 30-year-old mother of six young children. She is a very religious
+        person. Recently, she gave birth to a baby boy with complications, thus, she was referred by the
+        hospital to your agency to seek help. During the intake interview, Marina also complained about her
+        husband being a drunkard. The husband also wants Marina to have more babies as they are
+        “blessing from heaven”. The social worker therefore strongly advised Marina for the use of pills
+        as a method of contraception, which she herself found very effective in preventing another
+        pregnancy. But Marina is
+        having second thoughts.`
+    },
+
+    case3: {
+        title: "Case 3",
+        story: `You were employed in a social work agency catering to needs of children in need of special
+        protection. Your supervisor has just asked you to complete an assessment on a three-year-old girl
+        who was recently admitted into the center.`
+    }
+
+
+};

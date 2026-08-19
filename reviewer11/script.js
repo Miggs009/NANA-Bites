@@ -25,6 +25,10 @@ const reviewScreen = document.getElementById("reviewScreen");
 const reviewBtn = document.getElementById("reviewBtn");
 const reviewContainer = document.getElementById("reviewContainer");
 
+const caseStudyElement = document.getElementById("caseStudy");
+const caseTitleElement = document.getElementById("caseTitle");
+const caseStoryElement = document.getElementById("caseStory");
+
 // Start Quiz
 loadQuestion();
 
@@ -41,11 +45,9 @@ function loadQuestion() {
 
     const card = quizCards[currentQuestion];
 
-    // NO QUESTION SHUFFLE
-    // Questions will appear in their original order.
-
-    // NO CHOICE SHUFFLE
-    // Choices will appear in their original order.
+    // =====================================
+    // QUESTION NUMBER
+    // =====================================
 
     questionNumber.innerHTML =
         `Question ${currentQuestion + 1} of ${quizCards.length}`;
@@ -56,7 +58,52 @@ function loadQuestion() {
     progressFill.style.width =
         ((currentQuestion + 1) / quizCards.length) * 100 + "%";
 
-    questionElement.innerHTML = card.question;
+
+    // =====================================
+    // CASE STUDY
+    // =====================================
+
+    if (
+        card.case &&
+        caseStudies[card.case]
+    ) {
+
+        const currentCase = caseStudies[card.case];
+
+        // Show case study
+        caseStudyElement.classList.remove("hidden");
+
+        // Display case title
+        caseTitleElement.innerHTML =
+            currentCase.title;
+
+        // Display case story
+        caseStoryElement.innerHTML =
+            currentCase.story;
+
+    }
+    else {
+
+        // Hide case study for normal questions
+        caseStudyElement.classList.add("hidden");
+
+        caseTitleElement.innerHTML = "";
+        caseStoryElement.innerHTML = "";
+
+    }
+
+
+    // =====================================
+    // QUESTION
+    // =====================================
+
+    questionElement.innerHTML =
+        card.question;
+
+
+    // =====================================
+    // CHOICES
+    // =====================================
 
     choicesElement.innerHTML = "";
 
@@ -74,18 +121,23 @@ function loadQuestion() {
                     name="choice"
                     value="${index}">
 
-                <strong>${String.fromCharCode(65 + index)}.</strong>
+                <strong>
+                    ${String.fromCharCode(65 + index)}.
+                </strong>
 
                 ${choice}
 
             </label>
         `;
 
+
         div.onclick = function () {
 
             document
                 .querySelectorAll(".choice")
-                .forEach(c => c.classList.remove("selected"));
+                .forEach(c =>
+                    c.classList.remove("selected")
+                );
 
             div.classList.add("selected");
 
@@ -95,11 +147,14 @@ function loadQuestion() {
 
         };
 
+
         choicesElement.appendChild(div);
 
     });
 
 }
+
+
 
 
 // =====================================

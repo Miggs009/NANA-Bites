@@ -44,7 +44,7 @@ const flashcards = [
             "Insight Development",
             "Environmental Modification"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Insight Development is directed toward helping the client understand their emotions, attitudes, behavior, and external realities more clearly."
     },
     {

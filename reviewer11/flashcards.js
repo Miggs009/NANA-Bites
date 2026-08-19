@@ -426,7 +426,7 @@ const flashcards = [
             "Diagnosis",
             "Assessment"
         ],
-        answer: 0,
+        answer: 3,
         explanation: "Social Diagnosis involves gathering, analyzing, and interpreting information to understand the client, problem, and social context for appropriate planning."
     },
     {

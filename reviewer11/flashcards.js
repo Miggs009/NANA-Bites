@@ -438,8 +438,8 @@ const flashcards = [
             "Data Gathering",
             "Analysis"
         ],
-        answer: null,
-        explanation: "The provided source does not specify an answer for this question."
+        answer: 2,
+        explanation: "Data Gathering"
     },
     {
         number: 37,

@@ -44,7 +44,7 @@ const flashcards = [
             "Insight Development",
             "Environmental Modification"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Insight Development is directed toward helping the client understand their emotions, attitudes, behavior, and external realities more clearly."
     },
     {
@@ -426,7 +426,7 @@ const flashcards = [
             "Diagnosis",
             "Assessment"
         ],
-        answer: 0,
+        answer: 3,
         explanation: "Social Diagnosis involves gathering, analyzing, and interpreting information to understand the client, problem, and social context for appropriate planning."
     },
     {
@@ -438,8 +438,8 @@ const flashcards = [
             "Data Gathering",
             "Analysis"
         ],
-        answer: null,
-        explanation: "The provided source does not specify an answer for this question."
+        answer: 2,
+        explanation: "Data Gathering"
     },
     {
         number: 37,

@@ -8,7 +8,7 @@ const flashcards = [
             "Biological factors",
             "Cultural traditions"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "The ecological perspective focuses on the interaction between individuals and the environments in which they live."
     },
     {
@@ -20,7 +20,7 @@ const flashcards = [
             "Building on client strengths and resources",
             "Ignoring environmental factors"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "The strengths-based approach emphasizes the client's abilities, strengths, resources, and potential rather than focusing primarily on deficits."
     },
     {
@@ -32,7 +32,7 @@ const flashcards = [
             "Problem-solving model",
             "Psychodynamic model"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "The strengths-based model emphasizes collaboration with clients and builds on their strengths, resources, and capacity to achieve goals."
     },
     {
@@ -44,7 +44,7 @@ const flashcards = [
             "Implementing community and policy changes",
             "Offering case management services"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Macro-level social work addresses larger systems through community development, organizational change, advocacy, and policy reform."
     },
     {
@@ -56,7 +56,7 @@ const flashcards = [
             "Ecological systems approach",
             "Humanistic approach"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "The ecological systems approach considers how individuals are affected by their broader social, cultural, and environmental contexts."
     },
     {
@@ -68,7 +68,7 @@ const flashcards = [
             "Anomie",
             "Labeling"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Differential association theory proposes that deviant behavior is learned through interaction with others."
     },
     {
@@ -80,7 +80,7 @@ const flashcards = [
             "Control theory",
             "Differential association theory"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Strain theory explains deviance as a result of a disconnect between socially approved goals and the legitimate means available to achieve them."
     },
     {
@@ -92,7 +92,7 @@ const flashcards = [
             "Social learning theory",
             "Conflict theory"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Labeling theory focuses on how society's reactions and labels can influence how individuals are perceived and how they behave."
     },
     {
@@ -104,7 +104,7 @@ const flashcards = [
             "Social control",
             "Socialization"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Deviance refers to behavior that violates established social or cultural norms."
     },
     {
@@ -116,7 +116,7 @@ const flashcards = [
             "Differential association theory",
             "Labeling theory"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Control theory suggests that strong social bonds discourage individuals from engaging in deviant or criminal behavior."
     },
     {
@@ -128,7 +128,7 @@ const flashcards = [
             "Psychoanalytic theory",
             "Behaviorist theory"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Psychoanalytic theory, associated with Freud, emphasizes unconscious processes and early childhood experiences."
     },
     {
@@ -140,8 +140,8 @@ const flashcards = [
             "Abraham Maslow",
             "Alfred Adler"
         ],
-        answer: 3,
-        explanation: "Abraham Maslow developed the hierarchy of needs, which describes human needs from basic physiological needs to self-actualization."
+        answer: 2,
+        explanation: "Abraham Maslow developed the hierarchy of needs."
     },
     {
         number: 13,
@@ -152,7 +152,7 @@ const flashcards = [
             "Trait theory",
             "Behaviorist theory"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Trait theory focuses on relatively stable and enduring characteristics that influence behavior."
     },
     {
@@ -164,7 +164,7 @@ const flashcards = [
             "Trait theory",
             "Humanistic theory"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Behaviorist theory emphasizes how reinforcement, punishment, and environmental conditioning shape behavior."
     },
     {
@@ -176,7 +176,7 @@ const flashcards = [
             "Antisocial Personality Disorder",
             "Obsessive-Compulsive Personality Disorder"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Antisocial Personality Disorder involves a pervasive pattern of disregard for and violation of the rights of others."
     },
     {
@@ -188,7 +188,7 @@ const flashcards = [
             "Histrionic Personality Disorder",
             "Schizoid Personality Disorder"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Histrionic Personality Disorder is characterized by excessive emotionality and a strong need for attention."
     },
     {
@@ -200,7 +200,7 @@ const flashcards = [
             "Obsessive-Compulsive Personality Disorder",
             "Schizotypal Personality Disorder"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Obsessive-Compulsive Personality Disorder is characterized by excessive concern with orderliness, perfectionism, and control."
     },
     {
@@ -212,7 +212,7 @@ const flashcards = [
             "Narcissistic Personality Disorder",
             "Avoidant Personality Disorder"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Borderline Personality Disorder is characterized by instability in relationships, self-image, emotions, and behavior, often accompanied by impulsivity."
     },
     {
@@ -224,7 +224,7 @@ const flashcards = [
             "Specific phobia",
             "Generalized anxiety disorder"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Specific phobia involves an intense and persistent fear of a particular object or situation."
     },
     {
@@ -236,7 +236,7 @@ const flashcards = [
             "Social phobia",
             "Agoraphobia"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Social phobia, also called social anxiety disorder, involves intense fear of social situations involving possible judgment or scrutiny."
     },
     {
@@ -248,7 +248,7 @@ const flashcards = [
             "Agoraphobia",
             "Social phobia"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Agoraphobia involves fear or anxiety about situations where escape or help may be difficult to obtain."
     },
     {
@@ -260,7 +260,7 @@ const flashcards = [
             "Agoraphobia",
             "Social phobia"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Claustrophobia is an intense fear of enclosed or confined spaces."
     },
     {
@@ -272,7 +272,7 @@ const flashcards = [
             "Acrophobia",
             "Aerophobia"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Acrophobia is an intense fear of heights."
     },
     {
@@ -284,7 +284,7 @@ const flashcards = [
             "Stratification",
             "Institutionalization"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Socialization is the process through which individuals learn and internalize the norms, values, beliefs, and behaviors of their society."
     },
     {
@@ -296,7 +296,7 @@ const flashcards = [
             "Altruism",
             "Compassion"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Empathy involves understanding and sharing another person's feelings or perspective."
     },
     {
@@ -308,7 +308,7 @@ const flashcards = [
             "The growth and change in individuals across the lifespan",
             "The classification of personality disorders"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Developmental psychology studies physical, cognitive, emotional, and social growth and changes across the lifespan."
     },
     {
@@ -320,7 +320,7 @@ const flashcards = [
             "Wellness",
             "Stability"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Health is commonly defined as a state of physical, mental, and social well-being."
     },
     {
@@ -332,7 +332,7 @@ const flashcards = [
             "Humanistic approach",
             "Cognitive approach"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "The humanistic approach emphasizes free will, personal growth, subjective experience, and individual potential."
     },
     {
@@ -344,7 +344,7 @@ const flashcards = [
             "Social stratification",
             "Social mobility"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Social stratification refers to the structured ranking of people into social groups based on factors such as wealth, status, and power."
     },
     {
@@ -356,7 +356,7 @@ const flashcards = [
             "The ability to switch between different roles smoothly",
             "The feeling of satisfaction with one's roles"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Role conflict occurs when the expectations associated with two or more roles are incompatible."
     },
     {
@@ -368,7 +368,7 @@ const flashcards = [
             "Accommodation",
             "Integration"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Adaptation refers to adjusting to changes or demands in the environment in order to maintain functioning and stability."
     },
     {
@@ -380,7 +380,7 @@ const flashcards = [
             "Psychoanalytic theory",
             "Humanistic theory"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Social learning theory explains that people can learn behaviors through observing and imitating others."
     },
     {
@@ -392,7 +392,7 @@ const flashcards = [
             "Value",
             "Belief"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "A role consists of the expectations and behaviors associated with a particular social status or position."
     },
     {
@@ -404,7 +404,7 @@ const flashcards = [
             "Trust vs. mistrust",
             "Autonomy vs. shame and doubt"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Trust vs. mistrust is Erikson's first psychosocial stage and occurs during infancy."
     },
     {
@@ -416,7 +416,7 @@ const flashcards = [
             "Humanism",
             "Realism"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Collectivism emphasizes group goals, social responsibilities, and the interests of the collective over individual interests."
     },
     {
@@ -428,7 +428,7 @@ const flashcards = [
             "Prestige",
             "Status"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Power is the ability to influence others and control or access resources."
     },
     {
@@ -440,7 +440,7 @@ const flashcards = [
             "Generalized Anxiety Disorder",
             "Panic Disorder"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Generalized Anxiety Disorder involves excessive and persistent worry about multiple areas of life."
     },
     {
@@ -452,7 +452,7 @@ const flashcards = [
             "Persistent sadness and loss of interest",
             "Difficulty concentrating and impulsive behavior"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "PTSD can involve intrusive memories, flashbacks, nightmares, and other forms of re-experiencing a traumatic event."
     },
     {
@@ -464,7 +464,7 @@ const flashcards = [
             "Moods",
             "Emotions"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Traits are relatively stable and enduring characteristics that influence behavior across different situations."
     },
     {
@@ -476,7 +476,7 @@ const flashcards = [
             "Post-conventional",
             "Egocentric"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "The post-conventional level involves reasoning based on social contracts, universal principles, and ethical values."
     },
     {
@@ -488,7 +488,7 @@ const flashcards = [
             "Compliance",
             "Obedience"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Conformity is the process of adjusting one's behavior or attitudes to match group norms or expectations."
     },
     {
@@ -500,7 +500,7 @@ const flashcards = [
             "Cyclothymic Disorder",
             "Dysthymic Disorder"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Bipolar disorder involves episodes of mood elevation or mania and episodes of depression."
     },
     {
@@ -512,8 +512,8 @@ const flashcards = [
             "Commitment",
             "Attraction"
         ],
-        answer: 1,
-        explanation: "Intimacy refers to emotional closeness, connection, and a sense of psychological closeness with another person."
+        answer: 0,
+        explanation: "Intimacy refers to emotional closeness, connection, and psychological closeness with another person."
     },
     {
         number: 44,
@@ -524,7 +524,7 @@ const flashcards = [
             "Psychoanalytic theory",
             "Humanistic theory"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Psychoanalytic theory emphasizes unconscious motives, conflicts, and experiences in personality development."
     },
     {
@@ -536,7 +536,7 @@ const flashcards = [
             "Maturation",
             "Developmental trajectory"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "The life-course perspective examines patterns of biological, psychological, and social changes throughout an individual's life."
     },
     {
@@ -548,7 +548,7 @@ const flashcards = [
             "Discrimination",
             "Bias"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Prejudice is a preconceived judgment or attitude toward a person or group that is not based on sufficient knowledge or experience."
     },
     {
@@ -560,7 +560,7 @@ const flashcards = [
             "Sexual orientation",
             "Gender expression"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Gender identity refers to a person's internal sense or personal experience of their gender."
     },
     {
@@ -572,7 +572,7 @@ const flashcards = [
             "Generalizability",
             "Objectivity"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Reliability refers to the consistency and stability of a measurement or research instrument."
     },
     {
@@ -584,7 +584,7 @@ const flashcards = [
             "Dilemma",
             "Decision"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "A dilemma occurs when a person faces difficult choices between competing options."
     },
     {
@@ -596,7 +596,7 @@ const flashcards = [
             "Socialization",
             "Developmental trajectory"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Maturation refers to genetically programmed biological growth and development that unfolds in a relatively predictable sequence."
     },
     {
@@ -608,7 +608,7 @@ const flashcards = [
             "Mediator",
             "Case Manager"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "An advocate works to promote clients' or communities' rights, needs, and access to resources and services."
     },
     {
@@ -620,7 +620,7 @@ const flashcards = [
             "Integration",
             "Cultural competence"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Acculturation refers to the process of learning and adapting to aspects of another culture while potentially maintaining elements of one's original culture."
     },
     {
@@ -632,7 +632,7 @@ const flashcards = [
             "Increase police patrols in the area",
             "Ignore the behavior and hope it stops on its own"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Community forums can identify underlying causes, encourage participation, and help develop collaborative solutions to community problems."
     },
     {
@@ -644,7 +644,7 @@ const flashcards = [
             "Control theory",
             "Differential association theory"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Strain theory can be used to understand deviant behavior as a response to blocked opportunities or difficulties achieving socially valued goals."
     },
     {
@@ -656,7 +656,7 @@ const flashcards = [
             "Superego",
             "Conscious"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "The id represents unconscious instinctual drives and impulses and may contribute to behavior arising from unconscious desires or conflicts."
     },
     {
@@ -668,7 +668,7 @@ const flashcards = [
             "Love and belonging",
             "Self-actualization"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "Once basic physiological and safety needs are adequately met, higher-level needs such as belonging, esteem, and ultimately self-actualization become increasingly important."
     },
     {
@@ -680,7 +680,7 @@ const flashcards = [
             "Psychoanalysis",
             "Humanistic Therapy"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Dialectical Behavior Therapy is specifically designed to help people with borderline personality disorder develop emotional regulation, distress tolerance, and interpersonal skills."
     },
     {
@@ -692,7 +692,7 @@ const flashcards = [
             "Avoid confronting the client's grandiosity",
             "Emphasize the client's superiority in therapy"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Treatment should establish appropriate boundaries while helping the client develop healthier self-perception, interpersonal functioning, and empathy."
     },
     {
@@ -704,7 +704,7 @@ const flashcards = [
             "Humanistic Therapy",
             "Cognitive Restructuring"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Exposure therapy gradually exposes a person to the feared object or situation in a controlled manner to reduce fear and avoidance."
     },
     {
@@ -716,19 +716,19 @@ const flashcards = [
             "Gestalt Therapy",
             "Rational Emotive Behavior Therapy (REBT)"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "CBT is an evidence-based approach for social anxiety that addresses anxious thoughts, avoidance, and behavioral patterns."
     },
     {
         number: 61,
-        question: "Darl expresses feeling disconnected and isolated from their community. Which intervention would best help increase their sense of belonging?",
+        question: "Darl expresses feeling disconnected and isolated from their community. Which intervention would best help them increase their sense of belonging?",
         choices: [
             "Encouraging them to focus on individual hobbies",
             "Helping them find and join local community groups",
             "Advising them to spend more time alone to reflect",
             "Suggesting they relocate to a new community"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Connecting the client with community groups can increase social support, participation, and a sense of belonging."
     },
     {
@@ -740,7 +740,7 @@ const flashcards = [
             "Labeling theory",
             "Attachment theory"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Role theory can help explain how losing employment may disrupt an individual's social role, identity, expectations, and sense of purpose."
     },
     {
@@ -752,7 +752,7 @@ const flashcards = [
             "Increase the presence of law enforcement officers in schools",
             "Focus on punitive measures for offenders"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "After-school programs can provide positive activities, supervision, social support, and constructive opportunities for young people."
     },
     {
@@ -764,7 +764,7 @@ const flashcards = [
             "Focusing on disciplinary actions for truancy",
             "Encouraging students to handle bullying independently"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Because bullying is identified as an underlying cause of truancy, addressing bullying directly through a comprehensive program is the appropriate priority."
     },
     {
@@ -776,8 +776,8 @@ const flashcards = [
             "Generativity vs. Stagnation",
             "Integrity vs. Despair"
         ],
-        answer: 3,
-        explanation: "Generativity vs. stagnation is the psychosocial stage associated with adulthood and involves productivity, contribution, and concern for future generations."
+        answer: 2,
+        explanation: "Generativity vs. Stagnation is the psychosocial stage associated with adulthood and involves productivity, contribution, and concern for future generations."
     },
     {
         number: 66,
@@ -788,7 +788,7 @@ const flashcards = [
             "Collective unconscious",
             "Self-actualization"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Adlerian theory emphasizes feelings of inferiority and how individuals develop strategies to compensate for perceived shortcomings."
     },
     {
@@ -800,7 +800,7 @@ const flashcards = [
             "Group therapy to build emotional dependence",
             "Medication for mood stabilization"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Behavioral interventions can focus on observable behaviors, consequences, responsibility, and reducing harmful or antisocial actions."
     },
     {
@@ -812,7 +812,7 @@ const flashcards = [
             "Ignoring the client's fears and pushing for social interaction",
             "Medication to reduce social anxiety"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Gradual exposure combined with support and positive reinforcement can help clients build confidence and reduce avoidance."
     },
     {
@@ -824,7 +824,7 @@ const flashcards = [
             "Encouraging the client to adopt a dog",
             "Discussing the client's childhood experiences with dogs"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Systematic desensitization begins by developing a hierarchy of feared situations, usually progressing from least frightening to most frightening."
     },
     {
@@ -836,7 +836,7 @@ const flashcards = [
             "Encouraging the client to face all fears at once",
             "Group therapy to discuss phobias"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "CBT can address anxious thoughts and avoidance patterns and may incorporate gradual exposure to feared situations."
     },
     {
@@ -848,7 +848,7 @@ const flashcards = [
             "Advise the client to reduce work hours without considering other factors",
             "Suggest the client should focus only on family responsibilities"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Ecological systems theory examines the reciprocal interactions between individuals and their multiple environments."
     },
     {
@@ -860,7 +860,7 @@ const flashcards = [
             "Advise the client to ignore the family member's criticism",
             "Focus on medication to alleviate symptoms"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Humanistic approaches emphasize acceptance, validation, self-worth, and the development of a positive sense of self."
     },
     {
@@ -872,8 +872,8 @@ const flashcards = [
             "Advising community members to relocate to areas with better job prospects",
             "Ignoring the problem as it is beyond the scope of social work"
         ],
-        answer: 2,
-        explanation: "Community-level programs that improve skills and employment opportunities address the systemic causes and conditions contributing to unemployment."
+        answer: 1,
+        explanation: "Community-level programs that improve skills and employment opportunities address systemic conditions contributing to unemployment."
     },
     {
         number: 74,
@@ -884,7 +884,7 @@ const flashcards = [
             "Focusing on community development projects",
             "Ignoring immediate needs to plan for future prevention"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "After a disaster, immediate social work priorities include safety, basic needs, emergency resources, support, and connecting people with services."
     },
     {
@@ -896,7 +896,7 @@ const flashcards = [
             "Identity vs. Role Confusion",
             "Intimacy vs. Isolation"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Erikson's Identity vs. Role Confusion stage occurs primarily during adolescence and involves developing a coherent sense of identity."
     },
     {
@@ -908,7 +908,7 @@ const flashcards = [
             "Encouraging the client's eccentric behavior",
             "Suggesting the client avoid social interactions"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "CBT can help clients examine unusual or distorted thoughts while developing healthier coping and social skills."
     },
     {
@@ -920,8 +920,8 @@ const flashcards = [
             "Focusing solely on legal actions against abusers",
             "Ignoring past experiences and looking only to the future"
         ],
-        answer: 1,
-        explanation: "A safe and supportive environment allows survivors to share experiences, build support networks, and begin healing without pressure to confront an abuser."
+        answer: 0,
+        explanation: "A safe and supportive environment allows survivors to share experiences, build support networks, and begin healing."
     },
     {
         number: 78,
@@ -932,7 +932,7 @@ const flashcards = [
             "Isolating immigrant families to maintain their cultural identity",
             "Ignoring the families' cultural backgrounds"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Practical support such as legal assistance and employment resources can help immigrant families adjust while respecting their cultural backgrounds."
     },
     {
@@ -944,8 +944,8 @@ const flashcards = [
             "Advising the client to ignore workplace norms",
             "Suggesting the client quit their job"
         ],
-        answer: 1,
-        explanation: "Culturally responsive practice helps clients understand and navigate differences between cultural values without requiring them to abandon their own identity."
+        answer: 0,
+        explanation: "Culturally responsive practice helps clients navigate cultural differences without requiring them to abandon their cultural identity."
     },
     {
         number: 80,
@@ -956,8 +956,8 @@ const flashcards = [
             "Ignoring cultural differences",
             "Isolating different cultural groups from each other"
         ],
-        answer: 1,
-        explanation: "Culturally competent practice recognizes, respects, and appropriately incorporates the diverse cultural perspectives of clients and communities."
+        answer: 0,
+        explanation: "Culturally competent practice recognizes, respects, and appropriately incorporates diverse cultural perspectives."
     },
     {
         number: 81,
@@ -968,7 +968,7 @@ const flashcards = [
             "Ignoring the client's experience of stigma",
             "Suggesting the client relocate to avoid stigmatization"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Education and awareness can challenge misconceptions and reduce stigma while helping the client access appropriate support."
     },
     {
@@ -980,7 +980,7 @@ const flashcards = [
             "Isolating youth from their peers",
             "Focusing solely on punitive measures"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Mentorship and positive role models can provide guidance, support, healthy relationships, and constructive behavioral examples."
     },
     {
@@ -992,8 +992,8 @@ const flashcards = [
             "Generativity vs. Stagnation",
             "Integrity vs. Despair"
         ],
-        answer: 3,
-        explanation: "Generativity vs. stagnation occurs during adulthood and involves questions of productivity, purpose, contribution, and concern for others."
+        answer: 2,
+        explanation: "Generativity vs. Stagnation is associated with adulthood and involves productivity, contribution, purpose, and concern for future generations."
     },
     {
         number: 84,
@@ -1004,7 +1004,7 @@ const flashcards = [
             "Love and belonging needs",
             "Esteem needs"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "Esteem needs include feelings of competence, achievement, recognition, and self-worth."
     },
     {
@@ -1016,7 +1016,7 @@ const flashcards = [
             "Maslow's Hierarchy of Needs",
             "Bandura's Social Learning Theory"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Freud's psychoanalytic theory explains personality and behavior in terms of unconscious conflicts, motives, and early experiences."
     },
     {
@@ -1028,7 +1028,7 @@ const flashcards = [
             "Encouraging the client's reliance on others",
             "Suggesting the client avoid social interactions"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "CBT can help clients with dependent patterns develop confidence, independent decision-making, problem-solving, and healthier beliefs about themselves."
     },
     {
@@ -1040,7 +1040,7 @@ const flashcards = [
             "Encouraging the client's emotional instability",
             "Suggesting the client suppress their emotions"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "DBT is particularly effective for BPD and teaches skills for emotional regulation, distress tolerance, mindfulness, and interpersonal effectiveness."
     },
     {
@@ -1052,7 +1052,7 @@ const flashcards = [
             "Bayanihan",
             "Pakikisama"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Utang na loob refers to a sense of gratitude and reciprocal obligation toward people who have provided significant help or support."
     },
     {
@@ -1064,7 +1064,7 @@ const flashcards = [
             "Hiya",
             "Bayanihan"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Hiya refers to a sense of shame, embarrassment, or concern about social judgment that can influence behavior."
     },
     {
@@ -1076,7 +1076,7 @@ const flashcards = [
             "Bayanihan",
             "Utang na loob"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Bayanihan refers to communal cooperation and helping one another, particularly within a community."
     },
     {
@@ -1088,7 +1088,7 @@ const flashcards = [
             "Encouraging community members to leave the area",
             "Increasing police presence"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Comprehensive job training and placement programs address long-term employment needs by improving skills and access to sustainable work."
     },
     {
@@ -1100,7 +1100,7 @@ const flashcards = [
             "Ignoring family involvement",
             "Implementing a strict disciplinary policy"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Supporting both students and families addresses the broader environmental factors that influence educational success."
     },
     {
@@ -1112,7 +1112,7 @@ const flashcards = [
             "Reinforcing the client's self-importance",
             "Suggesting the client avoid social interactions"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "CBT can help address distorted self-perceptions and develop healthier interpersonal patterns, including greater empathy and realistic self-appraisal."
     },
     {
@@ -1124,7 +1124,7 @@ const flashcards = [
             "Ignoring the client's behavior",
             "Suggesting the client remain isolated"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "CBT-based interventions can help address social functioning and emotional expression while respecting the client's pace and preferences."
     },
     {
@@ -1136,7 +1136,7 @@ const flashcards = [
             "Suggesting the client move immediately",
             "Increasing the client's isolation"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "A safety plan combined with community resources can help reduce risk, improve coping, and strengthen the client's support network."
     },
     {
@@ -1148,7 +1148,7 @@ const flashcards = [
             "Suggesting the client tolerate the situation",
             "Advising the client to quit their job without other plans"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "A social worker can provide emotional support while helping the client understand and access appropriate workplace complaint and advocacy processes."
     },
     {
@@ -1160,7 +1160,7 @@ const flashcards = [
             "Suggesting the client manage withdrawal on their own",
             "Focusing solely on punitive measures"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Comprehensive rehabilitation can combine counseling, behavioral support, recovery resources, and peer support to address substance use and recovery needs."
     },
     {
@@ -1172,7 +1172,7 @@ const flashcards = [
             "Love and belonging needs",
             "Esteem needs"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "Esteem needs include achievement, recognition, competence, and respect from oneself and others."
     },
     {
@@ -1184,7 +1184,7 @@ const flashcards = [
             "Love and belonging needs",
             "Esteem needs"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "Feelings of worthlessness and failure are associated with unmet esteem needs, which include self-worth, competence, achievement, and recognition."
     },
     {
@@ -1196,7 +1196,7 @@ const flashcards = [
             "Intimacy vs. Isolation",
             "Integrity vs. Despair"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "Integrity vs. despair involves reflecting on one's life and developing a sense of fulfillment, meaning, and acceptance."
     }
 ];

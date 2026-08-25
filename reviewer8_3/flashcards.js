@@ -1,679 +1,1202 @@
 const flashcards = [
     {
         number: 1,
-        question: "Which of Freud's three main structures of personality is described as 'unconscious' and 'pleasure seeking'?",
+        question: "What is the primary focus of the ecological perspective in social work?",
         choices: [
-            "Superego",
-            "Id",
-            "Projection",
-            "Ego",
-            "Subliminal perception"
+            "Individual's internal processes",
+            "Interactions between individuals and their environments",
+            "Biological factors",
+            "Cultural traditions"
         ],
-        answer: 2,
-        explanation: "The id is the unconscious part of personality that operates according to the pleasure principle and seeks immediate gratification."
+        answer: 1,
+        explanation: "The ecological perspective focuses on the interaction between individuals and the environments in which they live."
     },
     {
         number: 2,
-        question: "In the present time, how does a psychiatrist typically treat his/her patients?",
+        question: "Which of the following is a key principle of the strengths-based approach in social work?",
         choices: [
-            "By giving them projective tests",
-            "Through hypnosis",
-            "Through psychoanalysis",
-            "By studying behavioral techniques",
-            "By prescribing medication"
+            "Focusing on deficits",
+            "Highlighting client problems",
+            "Building on client strengths and resources",
+            "Ignoring environmental factors"
         ],
-        answer: 3,
-        explanation: "The provided answer key identifies psychoanalysis as the answer."
+        answer: 2,
+        explanation: "The strengths-based approach emphasizes the client's abilities, strengths, resources, and potential rather than focusing primarily on deficits."
     },
     {
         number: 3,
-        question: "What isn't a Freudian stage of development?",
+        question: "Which model of social work practice emphasizes collaboration and mutual goal setting with clients?",
         choices: [
-            "Latency",
-            "Oral",
-            "Repression",
-            "Genital",
-            "Phallic"
+            "Medical model",
+            "Strengths-based model",
+            "Problem-solving model",
+            "Psychodynamic model"
         ],
-        answer: 3,
-        explanation: "Repression is a defense mechanism, not one of Freud's psychosexual stages. The stages include oral, anal, phallic, latency, and genital."
+        answer: 1,
+        explanation: "The strengths-based model emphasizes collaboration with clients and builds on their strengths, resources, and capacity to achieve goals."
     },
     {
         number: 4,
-        question: "Bill has been having family problems lately. He has started drinking heavily the past few months. Whenever his friends approach him and accuse him of having a drinking problem, he acts like he doesn't know what they're talking about and denies the whole thing. Bill is illustrating which of the following?",
+        question: "What is the main goal of social work intervention at the macro level?",
         choices: [
-            "Projection",
-            "Repression",
-            "Regression",
-            "Denial"
+            "Providing individual therapy",
+            "Conducting family counseling",
+            "Implementing community and policy changes",
+            "Offering case management services"
         ],
-        answer: 4,
-        explanation: "Denial is a defense mechanism in which a person refuses to accept or acknowledge an unpleasant reality."
+        answer: 2,
+        explanation: "Macro-level social work addresses larger systems through community development, organizational change, advocacy, and policy reform."
     },
     {
         number: 5,
-        question: "According to Freud, which stage of development pertains to the fact that anything involving the mouth is a sexual activity?",
+        question: "Which social work approach emphasizes the importance of cultural competence in practice?",
         choices: [
-            "Anal",
-            "Oral",
-            "Latency",
-            "Phallic"
+            "Psychodynamic approach",
+            "Cognitive-behavioral approach",
+            "Ecological systems approach",
+            "Humanistic approach"
         ],
         answer: 2,
-        explanation: "The oral stage is Freud's first psychosexual stage and focuses on pleasure obtained through the mouth."
+        explanation: "The ecological systems approach considers how individuals are affected by their broader social, cultural, and environmental contexts."
     },
     {
         number: 6,
-        question: "James's favorite uncle passes away from a long battle with illness, but he refuses to believe that it happened. This is an example of what defense mechanism?",
+        question: "Which term describes the process by which individuals learn deviant behavior through interactions with others?",
         choices: [
-            "Projection",
-            "Sublimation",
-            "Repression",
-            "Denial"
+            "Differential association",
+            "Social control",
+            "Anomie",
+            "Labeling"
         ],
-        answer: 4,
-        explanation: "Denial involves refusing to accept a painful or distressing reality."
+        answer: 0,
+        explanation: "Differential association theory proposes that deviant behavior is learned through interaction with others."
     },
     {
         number: 7,
-        question: "Restrictions on visitation of parents to their children during hospitalization changed to a policy that allows parents complete access to their children. The change occurred because of research on the emotional effects of mother-child separation during hospitalization conducted by whom?",
+        question: "Which theory posits that deviance occurs when societal expectations and the means to achieve them are misaligned?",
         choices: [
-            "Bronfenbrenner",
-            "Erikson",
-            "Bowlby",
-            "Freud",
-            "None of these"
+            "Strain theory",
+            "Social learning theory",
+            "Control theory",
+            "Differential association theory"
         ],
-        answer: 3,
-        explanation: "John Bowlby's work on attachment and the effects of separation helped establish the importance of maintaining parent-child contact."
+        answer: 0,
+        explanation: "Strain theory explains deviance as a result of a disconnect between socially approved goals and the legitimate means available to achieve them."
     },
     {
         number: 8,
-        question: "Around what age do most infants begin to show separation anxiety accompanied by wariness of strangers?",
+        question: "Which theory focuses on the societal reaction to deviance rather than the deviant act itself?",
         choices: [
-            "6 months",
-            "12 months",
-            "8 months",
-            "24 months"
+            "Labeling theory",
+            "Strain theory",
+            "Social learning theory",
+            "Conflict theory"
         ],
-        answer: 1,
-        explanation: "The provided answer key identifies approximately 6 months as the answer."
+        answer: 0,
+        explanation: "Labeling theory focuses on how society's reactions and labels can influence how individuals are perceived and how they behave."
     },
     {
         number: 9,
-        question: "John recently survived a car accident. Doctors determined that he had suffered some damage to the frontal region of his brain during the accident. What factor associated with cognitive limitations and emotional problems might be affecting John's functioning since the accident?",
+        question: "Which concept describes the violation of cultural norms and expectations?",
         choices: [
-            "Genetic factor",
-            "Emotional factor",
-            "Psychological factor",
-            "Affective factor"
+            "Conformity",
+            "Deviance",
+            "Social control",
+            "Socialization"
         ],
-        answer: 2,
-        explanation: "The provided answer key identifies emotional factors as affecting John's functioning."
+        answer: 1,
+        explanation: "Deviance refers to behavior that violates established social or cultural norms."
     },
     {
         number: 10,
-        question: "Jane, a preschooler, insists on dressing herself each morning for school, even though she generally selects mismatching outfits, misses buttons, and wears her shoes on the wrong feet. When her mother tries to dress Jane or fix her outfit, Jane brushes her mother off and insists on doing it herself. What stage of psychosocial development best describes Jane's behavior?",
+        question: "Which theory suggests that crime results from the absence of social ties and communal bonds?",
         choices: [
-            "Trust vs. Mistrust",
-            "Autonomy vs. Shame and Doubt",
-            "Initiative vs. Guilt",
-            "Industry vs. Inferiority"
+            "Anomie theory",
+            "Control theory",
+            "Differential association theory",
+            "Labeling theory"
         ],
-        answer: 3,
-        explanation: "The provided answer key identifies Initiative vs. Guilt as the answer."
+        answer: 1,
+        explanation: "Control theory suggests that strong social bonds discourage individuals from engaging in deviant or criminal behavior."
     },
     {
         number: 11,
-        question: "The central theme of Erikson's theory of psychosocial stages was the development of:",
+        question: "Which personality theory emphasizes the role of unconscious processes and childhood experiences in shaping personality?",
         choices: [
-            "Personality",
-            "Psychosocial conflict",
-            "Social status",
-            "Ego identity"
+            "Humanistic theory",
+            "Trait theory",
+            "Psychoanalytic theory",
+            "Behaviorist theory"
         ],
         answer: 2,
-        explanation: "Erikson's theory emphasizes psychosocial conflicts or crises that individuals encounter throughout development."
+        explanation: "Psychoanalytic theory, associated with Freud, emphasizes unconscious processes and early childhood experiences."
     },
     {
         number: 12,
-        question: "At each stage of Erikson's theory of psychosocial development, people experience a(n) _________ that serves as a turning point.",
+        question: "Which psychologist is known for developing the hierarchy of needs?",
         choices: [
-            "Epiphany",
-            "Conflict",
-            "Paradigm shift",
-            "Turmoil"
+            "Sigmund Freud",
+            "Carl Rogers",
+            "Abraham Maslow",
+            "Alfred Adler"
         ],
         answer: 2,
-        explanation: "Each stage involves a psychosocial conflict or crisis that must be addressed for healthy development."
+        explanation: "Abraham Maslow developed the hierarchy of needs."
     },
     {
         number: 13,
-        question: "The stage that occurs between birth and one year of age is concerned with:",
+        question: "Which personality theory focuses on the consistent and enduring characteristics of an individual?",
         choices: [
-            "Trust vs. Mistrust",
-            "Autonomy vs. Shame and Doubt",
-            "Initiative vs. Guilt",
-            "Identity vs. Role Confusion"
+            "Humanistic theory",
+            "Psychoanalytic theory",
+            "Trait theory",
+            "Behaviorist theory"
         ],
-        answer: 1,
-        explanation: "Erikson's first psychosocial stage is Trust vs. Mistrust and occurs during infancy."
+        answer: 2,
+        explanation: "Trait theory focuses on relatively stable and enduring characteristics that influence behavior."
     },
     {
         number: 14,
-        question: "According to Skinner, unhealthy behavior:",
+        question: "Which theory posits that personality is largely shaped by reinforcements and punishments?",
         choices: [
-            "Can be traced to congenital deficiencies.",
-            "Does not exist.",
-            "Is a means of coping with excessive social control.",
-            "Is the result of permissive training during childhood."
+            "Psychoanalytic theory",
+            "Behaviorist theory",
+            "Trait theory",
+            "Humanistic theory"
         ],
-        answer: 4,
-        explanation: "The provided answer key identifies permissive training during childhood as the answer."
+        answer: 1,
+        explanation: "Behaviorist theory emphasizes how reinforcement, punishment, and environmental conditioning shape behavior."
     },
     {
         number: 15,
-        question: "The crisis that arises in young adulthood is concerned with:",
+        question: "Which personality disorder is characterized by a pervasive pattern of disregard for and violation of the rights of others?",
         choices: [
-            "Trust vs. Mistrust",
-            "Industry vs. Inferiority",
-            "Integrity vs. Despair",
-            "Intimacy vs. Isolation"
+            "Narcissistic Personality Disorder",
+            "Borderline Personality Disorder",
+            "Antisocial Personality Disorder",
+            "Obsessive-Compulsive Personality Disorder"
         ],
-        answer: 4,
-        explanation: "Erikson's young adulthood stage centers on Intimacy vs. Isolation."
+        answer: 2,
+        explanation: "Antisocial Personality Disorder involves a pervasive pattern of disregard for and violation of the rights of others."
     },
     {
         number: 16,
-        question: "Erik Erikson's interest in identity developed as a result of:",
+        question: "Which personality disorder is characterized by excessive emotionality and attention-seeking behavior?",
         choices: [
-            "Discovering his parents had lied to him about his parentage.",
-            "His early wandering throughout Europe.",
-            "Studies of displaced social groups in the United States.",
-            "All of the above."
+            "Avoidant Personality Disorder",
+            "Dependent Personality Disorder",
+            "Histrionic Personality Disorder",
+            "Schizoid Personality Disorder"
         ],
         answer: 2,
-        explanation: "The provided answer key identifies Erikson's early wandering throughout Europe as the answer."
+        explanation: "Histrionic Personality Disorder is characterized by excessive emotionality and a strong need for attention."
     },
     {
         number: 17,
-        question: "According to Erikson, what is the major conflict faced during adolescence?",
+        question: "Which personality disorder is characterized by a preoccupation with orderliness, perfectionism, and control?",
         choices: [
-            "Autonomy vs. Shame and Doubt",
-            "Intimacy vs. Isolation",
-            "Identity vs. Role Confusion",
-            "Generativity vs. Stagnation"
+            "Borderline Personality Disorder",
+            "Narcissistic Personality Disorder",
+            "Obsessive-Compulsive Personality Disorder",
+            "Schizotypal Personality Disorder"
         ],
-        answer: 3,
-        explanation: "Adolescence is associated with the psychosocial conflict of Identity vs. Role Confusion."
+        answer: 2,
+        explanation: "Obsessive-Compulsive Personality Disorder is characterized by excessive concern with orderliness, perfectionism, and control."
     },
     {
         number: 18,
-        question: "Eight-year-old Steven has a difficult time making friends at school. He has trouble completing his schoolwork accurately and on time, and as a result, receives little positive feedback from his teacher and parents. According to Erikson's theory, failure at this stage of development results in?",
+        question: "Which personality disorder is characterized by a pervasive pattern of instability in relationships, self-image, and affect, along with marked impulsivity?",
         choices: [
-            "Feelings of inferiority",
-            "A sense of guilt",
-            "A poor sense of self",
-            "Mistrust"
+            "Borderline Personality Disorder",
+            "Antisocial Personality Disorder",
+            "Narcissistic Personality Disorder",
+            "Avoidant Personality Disorder"
         ],
-        answer: 1,
-        explanation: "During Industry vs. Inferiority, failure to develop competence can lead to feelings of inferiority."
+        answer: 0,
+        explanation: "Borderline Personality Disorder is characterized by instability in relationships, self-image, emotions, and behavior, often accompanied by impulsivity."
     },
     {
         number: 19,
-        question: "The central conflict in the eighth stage of Erikson's theory focuses on integrity vs. despair and involves reflecting back on your life. Those who are successful in this stage emerge with:",
+        question: "Which term describes an intense fear of specific objects or situations, such as spiders or flying?",
         choices: [
-            "Hope",
-            "Fidelity",
-            "Purpose",
-            "Wisdom"
+            "Social phobia",
+            "Agoraphobia",
+            "Specific phobia",
+            "Generalized anxiety disorder"
         ],
-        answer: 4,
-        explanation: "Successfully resolving Integrity vs. Despair results in the virtue of wisdom."
+        answer: 2,
+        explanation: "Specific phobia involves an intense and persistent fear of a particular object or situation."
     },
     {
         number: 20,
-        question: "Fixation in the oral stage of development manifested by an obsession with stimulating the mouth.",
+        question: "Which phobia is characterized by an intense fear of social situations where one might be judged or scrutinized by others?",
         choices: [
-            "Anal fixation",
-            "Mouth fixation"
+            "Acrophobia",
+            "Claustrophobia",
+            "Social phobia",
+            "Agoraphobia"
         ],
         answer: 2,
-        explanation: "The provided answer key identifies mouth fixation as the answer."
+        explanation: "Social phobia, also called social anxiety disorder, involves intense fear of social situations involving possible judgment or scrutiny."
     },
     {
         number: 21,
-        question: "Resignation solution: a desire to be free of others, isolating one's self to avoid involvement with others and needing to restrict one's life within narrow boundaries. Which choice fits the description?",
+        question: "What is the term for the fear of being in places or situations from which escape might be difficult or embarrassing?",
         choices: [
-            "Moving Away",
-            "Moving Against",
-            "Moving Toward",
-            "Moving Downward"
+            "Claustrophobia",
+            "Acrophobia",
+            "Agoraphobia",
+            "Social phobia"
         ],
-        answer: 1,
-        explanation: "Moving Away describes withdrawal, isolation, and distancing oneself from others."
+        answer: 2,
+        explanation: "Agoraphobia involves fear or anxiety about situations where escape or help may be difficult to obtain."
     },
     {
         number: 22,
-        question: "Self-effacing solution: the appeal to be loved, accepting one's helplessness and becoming compliant with an exaggerated need for affection and approval. Which choice fits the description?",
+        question: "Which term describes an irrational fear of confined spaces?",
         choices: [
-            "Moving Away",
-            "Moving Against",
-            "Moving Toward",
-            "Moving Downward"
+            "Acrophobia",
+            "Claustrophobia",
+            "Agoraphobia",
+            "Social phobia"
         ],
-        answer: 3,
-        explanation: "Moving Toward involves seeking affection, approval, and security through dependence and compliance."
+        answer: 1,
+        explanation: "Claustrophobia is an intense fear of enclosed or confined spaces."
     },
     {
         number: 23,
-        question: "Self-expansive solution: an attempt at mastery, rebelling and resisting others to protect oneself from a threatening environment, and an exaggerated need for power. Which choice fits the description?",
+        question: "Which phobia involves an irrational fear of heights?",
         choices: [
-            "Moving Away",
-            "Moving Against",
-            "Moving Toward",
-            "Moving Downward"
+            "Claustrophobia",
+            "Agoraphobia",
+            "Acrophobia",
+            "Aerophobia"
         ],
         answer: 2,
-        explanation: "Moving Against involves hostility, resistance, competition, and attempts to gain power or control."
+        explanation: "Acrophobia is an intense fear of heights."
     },
     {
         number: 24,
-        question: "A set of ideas used to justify and defend the majority's interests and actions is known as:",
+        question: "Which term refers to the process through which individuals learn and internalize the values, beliefs, and norms of their culture?",
         choices: [
-            "Ideology",
-            "Dogma",
-            "Doctrine",
-            "Code of Ethics"
+            "Socialization",
+            "Deviance",
+            "Stratification",
+            "Institutionalization"
         ],
-        answer: 1,
-        explanation: "Ideology is a system of ideas or beliefs that can be used to justify social arrangements and interests."
+        answer: 0,
+        explanation: "Socialization is the process through which individuals learn and internalize the norms, values, beliefs, and behaviors of their society."
     },
     {
         number: 25,
-        question: "What concept has been somewhat marginal to criminology because it appears simplistic and is often perceived as supporting high levels of discipline, regulation, and punishment?",
+        question: "Which concept describes the ability to understand and share the feelings of another person?",
         choices: [
-            "Control Theory",
-            "Deviancy",
-            "Policy",
-            "Authority"
+            "Sympathy",
+            "Empathy",
+            "Altruism",
+            "Compassion"
         ],
         answer: 1,
-        explanation: "Control theory focuses on the social controls and restraints that discourage individuals from engaging in deviant behavior."
+        explanation: "Empathy involves understanding and sharing another person's feelings or perspective."
     },
     {
         number: 26,
-        question: "What is the central assumption behind control theories?",
+        question: "Which of the following is a primary focus of developmental psychology?",
         choices: [
-            "That deviance is the result of an absence of social control or restraint",
-            "That deviance is a social phenomenon",
-            "That deviance is controlled by society",
-            "That deviance is relative to different cultures, traditions, and practices"
+            "The influence of unconscious processes on behavior",
+            "The role of reinforcement and punishment in behavior",
+            "The growth and change in individuals across the lifespan",
+            "The classification of personality disorders"
         ],
-        answer: 1,
-        explanation: "Control theories assume that deviance occurs when social controls or restraints are weak or absent."
+        answer: 2,
+        explanation: "Developmental psychology studies physical, cognitive, emotional, and social growth and changes across the lifespan."
     },
     {
         number: 27,
-        question: "These are the components of a person's bond to society, EXCEPT: I. Attachment III. Assignment V. Belief II. Commitment IV. Involvement",
+        question: "Which term refers to a state of complete physical, mental, and social well-being?",
         choices: [
-            "Both III & V",
-            "V only",
-            "III only",
-            "I only",
-            "None of the above"
+            "Health",
+            "Fitness",
+            "Wellness",
+            "Stability"
         ],
-        answer: 3,
-        explanation: "The provided answer key identifies III only. The standard components of Hirschi's social bond are attachment, commitment, involvement, and belief."
+        answer: 0,
+        explanation: "Health is commonly defined as a state of physical, mental, and social well-being."
     },
     {
         number: 28,
-        question: "What theory points to society as the one which created deviance by identifying particular members as deviant?",
+        question: "Which psychological approach emphasizes the importance of free will and individual experience in the development of personality?",
         choices: [
-            "Differential Association Theory",
-            "Labeling Theory",
-            "Social Contract Theory",
-            "Deterrence Perspective",
-            "Social Process Theory"
+            "Behaviorist approach",
+            "Psychoanalytic approach",
+            "Humanistic approach",
+            "Cognitive approach"
         ],
         answer: 2,
-        explanation: "Labeling theory argues that deviance is partly created through society's process of labeling certain individuals or behaviors as deviant."
+        explanation: "The humanistic approach emphasizes free will, personal growth, subjective experience, and individual potential."
     },
     {
         number: 29,
-        question: "What concept believes in capitalism as the root of all crime and believes in a utopian society?",
+        question: "Which concept describes the hierarchy of social status and wealth in a society?",
         choices: [
-            "Differential Association Theory",
-            "Labeling Theory",
-            "Social Contract Theory",
-            "Radical Theory",
-            "Social Process Theory"
+            "Socialization",
+            "Social control",
+            "Social stratification",
+            "Social mobility"
         ],
-        answer: 4,
-        explanation: "Radical theory examines crime through the lens of capitalism, class inequality, and power relationships."
+        answer: 2,
+        explanation: "Social stratification refers to the structured ranking of people into social groups based on factors such as wealth, status, and power."
     },
     {
         number: 30,
-        question: "What is Symbolic Interaction Theory?",
+        question: "Which of the following best describes the concept of role conflict?",
         choices: [
-            "Believes in the interaction of nature and nurture.",
-            "People are motivated to act based on the meanings they assign to people and events.",
-            "A prediction about yourself causing you to behave in such a way that it comes true.",
-            "A relatively stable set of perceptions that people hold about themselves."
+            "The experience of tension when the expectations of different roles conflict",
+            "The process of learning new roles",
+            "The ability to switch between different roles smoothly",
+            "The feeling of satisfaction with one's roles"
         ],
-        answer: 2,
-        explanation: "Symbolic interactionism emphasizes that people interpret and act toward others and situations based on the meanings they assign to them."
+        answer: 0,
+        explanation: "Role conflict occurs when the expectations associated with two or more roles are incompatible."
     },
     {
         number: 31,
-        question: "These are the central themes of Symbolic Interactionism, EXCEPT:",
+        question: "Which term refers to the adjustment of individuals to changes in their environment to achieve stability?",
         choices: [
-            "The importance of meanings for human behavior.",
-            "The importance of the self-concept.",
-            "The relationship between the individual and society.",
-            "The relationship between the inner self and the outer self.",
-            "None of the above"
+            "Adaptation",
+            "Assimilation",
+            "Accommodation",
+            "Integration"
         ],
-        answer: 4,
-        explanation: "The relationship between the inner self and outer self is not identified as one of the central themes of symbolic interactionism in the provided material."
+        answer: 0,
+        explanation: "Adaptation refers to adjusting to changes or demands in the environment in order to maintain functioning and stability."
     },
     {
         number: 32,
-        question: "What is self-fulfilling prophecy?",
+        question: "Which theory posits that children learn behaviors and norms through observation and imitation of others?",
         choices: [
-            "A relatively stable set of perceptions that people hold about themselves.",
-            "A prediction about yourself making you behave in such a way that it comes true.",
-            "A shared system of verbal and non-verbal symbols.",
-            "The conception of self.",
-            "The fulfillment of the fictional self."
+            "Cognitive development theory",
+            "Social learning theory",
+            "Psychoanalytic theory",
+            "Humanistic theory"
         ],
-        answer: 2,
-        explanation: "A self-fulfilling prophecy occurs when a person's expectation or prediction influences behavior in a way that causes the expected outcome to occur."
+        answer: 1,
+        explanation: "Social learning theory explains that people can learn behaviors through observing and imitating others."
     },
     {
         number: 33,
-        question: "What is language?",
+        question: "Which concept in sociology refers to the expectations and behaviors associated with a particular status or position?",
         choices: [
-            "A relatively stable set of perceptions that people hold about themselves.",
-            "A prediction about yourself making you behave in such a way that it comes true.",
-            "A shared system of verbal and non-verbal symbols.",
-            "The conception of self."
+            "Role",
+            "Norm",
+            "Value",
+            "Belief"
         ],
-        answer: 3,
-        explanation: "Language is a shared system of verbal and non-verbal symbols used for communication and meaning-making."
+        answer: 0,
+        explanation: "A role consists of the expectations and behaviors associated with a particular social status or position."
     },
     {
         number: 34,
-        question: "What are the three structures of personality development?",
+        question: "Which stage of Erikson's psychosocial development theory is characterized by the conflict of trust vs. mistrust?",
         choices: [
-            "Id, ego, and superego",
-            "Social, emotional, and mental",
-            "Conscious, subconscious, and preconscious",
-            "Inner, outer, and the whole"
+            "Initiative vs. guilt",
+            "Industry vs. inferiority",
+            "Trust vs. mistrust",
+            "Autonomy vs. shame and doubt"
         ],
-        answer: 1,
-        explanation: "Freud's structural model of personality consists of the id, ego, and superego."
+        answer: 2,
+        explanation: "Trust vs. mistrust is Erikson's first psychosocial stage and occurs during infancy."
     },
     {
         number: 35,
-        question: "The Oedipus complex, in psychoanalytic theory, is a group of largely unconscious ideas and feelings which center on the desire to possess the parent of the same sex and eliminate the parent of the opposite sex. True or False?",
+        question: "Which term describes a strong sense of duty and commitment to group goals, often at the expense of individual desires?",
         choices: [
-            "True",
-            "False",
-            "False, because it is a group of subconscious, not unconscious, ideas.",
-            "False, it should be Electra Complex, not Oedipus Complex."
+            "Individualism",
+            "Collectivism",
+            "Humanism",
+            "Realism"
         ],
-        answer: 2,
-        explanation: "The provided answer key identifies False. The traditional description of the Oedipus complex involves a child's desire for the opposite-sex parent and rivalry with the same-sex parent."
+        answer: 1,
+        explanation: "Collectivism emphasizes group goals, social responsibilities, and the interests of the collective over individual interests."
     },
     {
         number: 36,
-        question: "According to Freud, the mind is approximately:",
+        question: "Which concept refers to the ability to influence others and control resources?",
         choices: [
-            "80% conscious and 20% unconscious",
-            "60% conscious and 40% unconscious",
-            "70% unconscious and 30% conscious",
-            "90% unconscious and 10% conscious"
+            "Authority",
+            "Power",
+            "Prestige",
+            "Status"
         ],
-        answer: 4,
-        explanation: "The provided answer key identifies the mind as approximately 90% unconscious and 10% conscious."
+        answer: 1,
+        explanation: "Power is the ability to influence others and control or access resources."
     },
     {
         number: 37,
-        question: "According to Erikson's Psychosocial Stages of Development, 'Identity versus Role Confusion' is a characteristic of what developmental stage?",
+        question: "Which psychological disorder involves excessive worry about a variety of topics, activities, or events?",
         choices: [
-            "Infancy",
-            "Pre-adolescence",
-            "Latency",
-            "Adolescence"
+            "Obsessive-Compulsive Disorder",
+            "Social Anxiety Disorder",
+            "Generalized Anxiety Disorder",
+            "Panic Disorder"
         ],
-        answer: 4,
-        explanation: "Identity vs. Role Confusion is Erikson's psychosocial crisis associated primarily with adolescence."
+        answer: 2,
+        explanation: "Generalized Anxiety Disorder involves excessive and persistent worry about multiple areas of life."
     },
     {
         number: 38,
-        question: "A soft body, underdeveloped muscles, round shape and over-developed digestive system, love of food, tolerant, evenness of emotions, love of comfort, sociable, good-humored, relaxed, and need for affection. Which choice best fits these descriptions?",
+        question: "Which of the following is a characteristic of Post-Traumatic Stress Disorder (PTSD)?",
         choices: [
-            "Endomorphic",
-            "Ectomorphic",
-            "Mesomorphic",
-            "Somatoformic"
+            "Excessive energy and hyperactivity",
+            "Re-experiencing traumatic events through flashbacks or nightmares",
+            "Persistent sadness and loss of interest",
+            "Difficulty concentrating and impulsive behavior"
         ],
         answer: 1,
-        explanation: "Endomorphic body types are traditionally described as having a softer, rounder body shape and are associated in this theory with comfort-seeking and sociability."
+        explanation: "PTSD can involve intrusive memories, flashbacks, nightmares, and other forms of re-experiencing a traumatic event."
     },
     {
         number: 39,
-        question: "Which traditional family development theory defines the family as 'socially sanctioned cohabitation of a man and a woman who have preferential or exclusive enjoyment of economic and sexual rights over one another and are committed to raise the children brought to life by the woman'?",
+        question: "Which concept refers to the stable, enduring aspects of personality that influence behavior across situations?",
         choices: [
-            "Psychoanalytic Theory",
-            "Structural-Functional Theory",
-            "Social Exchange Theory",
-            "Social Learning Theory"
+            "Traits",
+            "States",
+            "Moods",
+            "Emotions"
         ],
-        answer: 2,
-        explanation: "Structural-functional theory examines the family in terms of its socially recognized structure, roles, and functions within society."
+        answer: 0,
+        explanation: "Traits are relatively stable and enduring characteristics that influence behavior across different situations."
     },
     {
         number: 40,
-        case: "case1",
-        question: "Human development is profoundly affected by the isolated events occurring in his or her environment. This is a view of what theory?",
+        question: "Which stage of Kohlberg's theory of moral development is characterized by the recognition of universal ethical principles?",
         choices: [
-            "Ecological System Theory",
-            "Strengths Perspective",
-            "Communication and Conflict Theory",
-            "Family Systems Theory"
+            "Pre-conventional",
+            "Conventional",
+            "Post-conventional",
+            "Egocentric"
         ],
-        answer: 1,
-        explanation: "Ecological systems theory emphasizes how environmental contexts and interactions influence human development."
+        answer: 2,
+        explanation: "The post-conventional level involves reasoning based on social contracts, universal principles, and ethical values."
     },
     {
         number: 41,
-        case: "case1",
-
-        question: "What refers to a document issued by the Secretary of the Department of Social Welfare and Development (DSWD) or the Secretary's duly authorized representative as provided for by Republic Act No. 9523?",
+        question: "Which term describes the process of changing one's thoughts, feelings, and behaviors to align with group norms?",
         choices: [
-            "CDCLAA",
-            "CDCLLA",
-            "CCDLAA",
-            "CCDLA"
+            "Socialization",
+            "Conformity",
+            "Compliance",
+            "Obedience"
         ],
         answer: 1,
-        explanation: "The provided answer key identifies CDCLAA as the answer."
+        explanation: "Conformity is the process of adjusting one's behavior or attitudes to match group norms or expectations."
     },
     {
         number: 42,
-        case: "case1",
-
-        question: "When was RA 11222, also known as 'An Act Allowing the Rectification of Simulated Birth Records and Prescribing Administrative Adoption Proceedings for the Purpose,' signed by the President?",
+        question: "Which psychological disorder is characterized by alternating periods of mania and depression?",
         choices: [
-            "February 28, 2019",
-            "February 29, 2019",
-            "March 28, 2019",
-            "March 29, 2019"
+            "Major Depressive Disorder",
+            "Bipolar Disorder",
+            "Cyclothymic Disorder",
+            "Dysthymic Disorder"
         ],
-        answer: 2,
-        explanation: "The provided answer key identifies February 29, 2019 as the answer."
+        answer: 1,
+        explanation: "Bipolar disorder involves episodes of mood elevation or mania and episodes of depression."
     },
     {
         number: 43,
-        case: "case1",
-
-        question: "When was RA 11222 published in the Official Gazette to inform people?",
+        question: "Which term refers to the feeling of emotional and psychological closeness to others?",
         choices: [
-            "February 28, 2019",
-            "March 14, 2019",
-            "March 29, 2019",
-            "March 28, 2019"
+            "Intimacy",
+            "Passion",
+            "Commitment",
+            "Attraction"
         ],
-        answer: 2,
-        explanation: "The provided answer key identifies March 14, 2019 as the answer."
+        answer: 0,
+        explanation: "Intimacy refers to emotional closeness, connection, and psychological closeness with another person."
     },
     {
         number: 44,
-        case: "case1",
-
-        question: "When was RA 11222 effective?",
+        question: "Which theory posits that personality development is influenced by unconscious motives and conflicts?",
         choices: [
-            "February 28, 2019",
-            "March 14, 2019",
-            "March 29, 2019",
-            "March 28, 2019"
+            "Behaviorist theory",
+            "Cognitive theory",
+            "Psychoanalytic theory",
+            "Humanistic theory"
         ],
-        answer: 3,
-        explanation: "The provided answer key identifies March 29, 2019 as the effective date."
+        answer: 2,
+        explanation: "Psychoanalytic theory emphasizes unconscious motives, conflicts, and experiences in personality development."
     },
     {
         number: 45,
-        case: "case1",
-
-        question: "In making the Social Case Study of the Child for Adoption, the Social Worker may include the Child Developmental History. In line with this, at what age can the child be able to drink from a cup?",
+        question: "Which concept describes the pattern of changes in an individual's life, including biological, psychological, and social aspects?",
         choices: [
-            "0-3 months",
-            "4-6 months",
-            "0-1 month",
-            "7-11 months"
+            "Life-course",
+            "Social clock",
+            "Maturation",
+            "Developmental trajectory"
         ],
-        answer: 4,
-        explanation: "The provided answer key identifies 7-11 months as the developmental period when the child can drink from a cup."
+        answer: 0,
+        explanation: "The life-course perspective examines patterns of biological, psychological, and social changes throughout an individual's life."
     },
     {
         number: 46,
-        case: "case1",
-
-        question: "At what age in the developmental milestones can the child be able to feed self neatly, with minimal spilling?",
+        question: "Which term refers to a preconceived opinion that is not based on reason or actual experience?",
         choices: [
-            "1-3 years old",
-            "4-5 years old",
-            "8-11 months",
-            "7 years old"
+            "Stereotype",
+            "Prejudice",
+            "Discrimination",
+            "Bias"
         ],
         answer: 1,
-        explanation: "The provided answer key identifies 1-3 years old as the appropriate developmental period."
+        explanation: "Prejudice is a preconceived judgment or attitude toward a person or group that is not based on sufficient knowledge or experience."
     },
     {
         number: 47,
-        case: "case1",
-
-        question: "At what age in the developmental milestones can the child be able to draw a circle and square?",
+        question: "Which term describes the personal sense of being male or female?",
         choices: [
-            "1-2 years",
-            "3-6 years",
-            "7-9 years",
-            "10-11 months"
+            "Gender role",
+            "Gender identity",
+            "Sexual orientation",
+            "Gender expression"
         ],
-        answer: 2,
-        explanation: "The provided answer key identifies 3-6 years as the developmental period for this milestone."
+        answer: 1,
+        explanation: "Gender identity refers to a person's internal sense or personal experience of their gender."
     },
     {
         number: 48,
-        case: "case1",
-
-        question: "All petitions, documents, records, and papers relating to administrative adoption proceedings in the files of the city or municipal SWDOs, the DSWD central and field offices, or any other agency or institution participating in such proceedings shall be strictly _______.",
+        question: "Which concept in psychology refers to the consistency of a research study or measuring test?",
         choices: [
-            "Confidential",
-            "Private",
-            "Off limit",
-            "Unrecorded"
+            "Validity",
+            "Reliability",
+            "Generalizability",
+            "Objectivity"
         ],
         answer: 1,
-        explanation: "Adoption-related petitions, records, and documents are required to be kept confidential."
+        explanation: "Reliability refers to the consistency and stability of a measurement or research instrument."
     },
     {
         number: 49,
-        case: "case1",
-
-        question: "When did President Rodrigo Duterte sign Republic Act 11469, or the 'Bayanihan to Heal as One Act,' into law?",
+        question: "Which term describes a situation where a person must choose between two or more equally desirable or undesirable options?",
         choices: [
-            "March 22, 2020",
-            "March 24, 2020",
-            "March 26, 2020",
-            "March 25, 2020"
+            "Conflict",
+            "Stress",
+            "Dilemma",
+            "Decision"
         ],
-        answer: 3,
-        explanation: "The provided answer key identifies March 26, 2020 as the date."
+        answer: 2,
+        explanation: "A dilemma occurs when a person faces difficult choices between competing options."
     },
     {
         number: 50,
-        case: "case2",
-
-        question: "What was the date that SARS-CoV-2 was confirmed in the Philippines?",
+        question: "Which concept in developmental psychology refers to the genetic potential for growth and development that unfolds in a predictable pattern?",
         choices: [
-            "January 24, 2020",
-            "January 28, 2020",
-            "January 18, 2020",
-            "January 30, 2020"
+            "Epigenesis",
+            "Maturation",
+            "Socialization",
+            "Developmental trajectory"
         ],
-        answer: 4,
-        explanation: "The provided answer key identifies January 30, 2020 as the date."
+        answer: 1,
+        explanation: "Maturation refers to genetically programmed biological growth and development that unfolds in a relatively predictable sequence."
+    },
+    {
+        number: 51,
+        question: "Mary Cris notices that the community she serves lacks access to clean water. She decides to advocate for improved water infrastructure. Which social work role is Mary Cris primarily performing in this situation?",
+        choices: [
+            "Broker",
+            "Advocate",
+            "Mediator",
+            "Case Manager"
+        ],
+        answer: 1,
+        explanation: "An advocate works to promote clients' or communities' rights, needs, and access to resources and services."
+    },
+    {
+        number: 52,
+        question: "Jameston is helping a family adjust to a new cultural environment after migrating. He introduces them to cultural norms and supports them in finding community resources. Which concept is Jameston applying?",
+        choices: [
+            "Acculturation",
+            "Assimilation",
+            "Integration",
+            "Cultural competence"
+        ],
+        answer: 0,
+        explanation: "Acculturation refers to the process of learning and adapting to aspects of another culture while potentially maintaining elements of one's original culture."
+    },
+    {
+        number: 53,
+        question: "In a community, there has been an increase in vandalism among teenagers. As a social worker, how would you address this issue?",
+        choices: [
+            "Punish the offenders harshly to set an example",
+            "Organize community forums to discuss underlying issues and possible solutions",
+            "Increase police patrols in the area",
+            "Ignore the behavior and hope it stops on its own"
+        ],
+        answer: 1,
+        explanation: "Community forums can identify underlying causes, encourage participation, and help develop collaborative solutions to community problems."
+    },
+    {
+        number: 54,
+        question: "Melissa is dealing with a client who frequently engages in theft. Which theory might Melissa use to understand this behavior?",
+        choices: [
+            "Strain theory",
+            "Labeling theory",
+            "Control theory",
+            "Differential association theory"
+        ],
+        answer: 0,
+        explanation: "Strain theory can be used to understand deviant behavior as a response to blocked opportunities or difficulties achieving socially valued goals."
+    },
+    {
+        number: 55,
+        question: "Coleen is helping a client understand their behavior pattern using Freud's psychodynamic theory. The client exhibits strong, irrational fears. Which part of Freud's model might be influencing this behavior?",
+        choices: [
+            "Id",
+            "Ego",
+            "Superego",
+            "Conscious"
+        ],
+        answer: 0,
+        explanation: "The id represents unconscious instinctual drives and impulses and may contribute to behavior arising from unconscious desires or conflicts."
+    },
+    {
+        number: 56,
+        question: "Loisa is using Maslow's hierarchy of needs to help a client. The client has stable employment and a secure home but feels unfulfilled. According to Maslow, which need should Loisa address next?",
+        choices: [
+            "Physiological",
+            "Safety",
+            "Love and belonging",
+            "Self-actualization"
+        ],
+        answer: 3,
+        explanation: "Once basic physiological and safety needs are adequately met, higher-level needs such as belonging, esteem, and ultimately self-actualization become increasingly important."
+    },
+    {
+        number: 57,
+        question: "Carl is working with a client diagnosed with borderline personality disorder. The client exhibits intense emotional instability and fear of abandonment. Which approach is most effective in managing these symptoms?",
+        choices: [
+            "Cognitive Behavioral Therapy",
+            "Dialectical Behavior Therapy (DBT)",
+            "Psychoanalysis",
+            "Humanistic Therapy"
+        ],
+        answer: 1,
+        explanation: "Dialectical Behavior Therapy is specifically designed to help people with borderline personality disorder develop emotional regulation, distress tolerance, and interpersonal skills."
+    },
+    {
+        number: 58,
+        question: "A client diagnosed with narcissistic personality disorder (NPD) exhibits grandiosity and a need for admiration. How should a social worker approach treatment?",
+        choices: [
+            "Focus on reinforcing the client's self-esteem",
+            "Set clear boundaries and focus on developing empathy",
+            "Avoid confronting the client's grandiosity",
+            "Emphasize the client's superiority in therapy"
+        ],
+        answer: 1,
+        explanation: "Treatment should establish appropriate boundaries while helping the client develop healthier self-perception, interpersonal functioning, and empathy."
+    },
+    {
+        number: 59,
+        question: "Yuki, a client, has an intense fear of flying that prevents her from traveling for work. Which therapeutic approach is most appropriate for addressing her phobia?",
+        choices: [
+            "Exposure Therapy",
+            "Psychodynamic Therapy",
+            "Humanistic Therapy",
+            "Cognitive Restructuring"
+        ],
+        answer: 0,
+        explanation: "Exposure therapy gradually exposes a person to the feared object or situation in a controlled manner to reduce fear and avoidance."
+    },
+    {
+        number: 60,
+        question: "Yoshie exhibits extreme anxiety and avoidance of social situations due to social phobia. Which treatment is most effective for social phobia?",
+        choices: [
+            "Psychoanalysis",
+            "Cognitive Behavioral Therapy (CBT)",
+            "Gestalt Therapy",
+            "Rational Emotive Behavior Therapy (REBT)"
+        ],
+        answer: 1,
+        explanation: "CBT is an evidence-based approach for social anxiety that addresses anxious thoughts, avoidance, and behavioral patterns."
+    },
+    {
+        number: 61,
+        question: "Darl expresses feeling disconnected and isolated from their community. Which intervention would best help them increase their sense of belonging?",
+        choices: [
+            "Encouraging them to focus on individual hobbies",
+            "Helping them find and join local community groups",
+            "Advising them to spend more time alone to reflect",
+            "Suggesting they relocate to a new community"
+        ],
+        answer: 1,
+        explanation: "Connecting the client with community groups can increase social support, participation, and a sense of belonging."
+    },
+    {
+        number: 62,
+        question: "Kent is working with a client facing unemployment. The client feels a loss of identity and purpose. Which theory can Kent apply to help the client understand and navigate this transition?",
+        choices: [
+            "Social exchange theory",
+            "Role theory",
+            "Labeling theory",
+            "Attachment theory"
+        ],
+        answer: 1,
+        explanation: "Role theory can help explain how losing employment may disrupt an individual's social role, identity, expectations, and sense of purpose."
+    },
+    {
+        number: 63,
+        question: "A community is experiencing a rise in juvenile delinquency. As a social worker, which approach would you take to address this issue at a community level?",
+        choices: [
+            "Implement stricter curfew laws for teenagers",
+            "Develop and promote after-school programs and activities",
+            "Increase the presence of law enforcement officers in schools",
+            "Focus on punitive measures for offenders"
+        ],
+        answer: 1,
+        explanation: "After-school programs can provide positive activities, supervision, social support, and constructive opportunities for young people."
+    },
+    {
+        number: 64,
+        question: "Laura is addressing truancy in a local high school. She discovers that many students skip school due to bullying. Which strategy should Laura prioritize?",
+        choices: [
+            "Increasing academic workload to keep students engaged",
+            "Implementing a comprehensive anti-bullying program",
+            "Focusing on disciplinary actions for truancy",
+            "Encouraging students to handle bullying independently"
+        ],
+        answer: 1,
+        explanation: "Because bullying is identified as an underlying cause of truancy, addressing bullying directly through a comprehensive program is the appropriate priority."
+    },
+    {
+        number: 65,
+        question: "Lester is using Erikson's stages of psychosocial development to help a middle-aged client experiencing a crisis. The client feels stuck and unproductive. Which stage might this client be struggling with?",
+        choices: [
+            "Trust vs. Mistrust",
+            "Intimacy vs. Isolation",
+            "Generativity vs. Stagnation",
+            "Integrity vs. Despair"
+        ],
+        answer: 2,
+        explanation: "Generativity vs. Stagnation is the psychosocial stage associated with adulthood and involves productivity, contribution, and concern for future generations."
+    },
+    {
+        number: 66,
+        question: "Emily notices her client has difficulty forming relationships and exhibits a strong need for approval. Using Adlerian theory, which concept might Emily explore with her client?",
+        choices: [
+            "Inferiority complex",
+            "Superiority complex",
+            "Collective unconscious",
+            "Self-actualization"
+        ],
+        answer: 0,
+        explanation: "Adlerian theory emphasizes feelings of inferiority and how individuals develop strategies to compensate for perceived shortcomings."
+    },
+    {
+        number: 67,
+        question: "Mark is treating a client with antisocial personality disorder. The client has a history of criminal behavior and lacks remorse. Which intervention is most appropriate?",
+        choices: [
+            "Long-term psychodynamic therapy",
+            "Behavioral interventions focusing on appropriate behavior and consequences",
+            "Group therapy to build emotional dependence",
+            "Medication for mood stabilization"
+        ],
+        answer: 1,
+        explanation: "Behavioral interventions can focus on observable behaviors, consequences, responsibility, and reducing harmful or antisocial actions."
+    },
+    {
+        number: 68,
+        question: "A client with avoidant personality disorder (APD) avoids social interactions due to fear of criticism and rejection. What should be the primary focus of therapy?",
+        choices: [
+            "Encouraging complete social withdrawal",
+            "Gradual exposure to social situations with positive reinforcement",
+            "Ignoring the client's fears and pushing for social interaction",
+            "Medication to reduce social anxiety"
+        ],
+        answer: 1,
+        explanation: "Gradual exposure combined with support and positive reinforcement can help clients build confidence and reduce avoidance."
+    },
+    {
+        number: 69,
+        question: "Calvin has a specific phobia of dogs that significantly impacts their daily life. The social worker decides to use systematic desensitization. What is the first step in this process?",
+        choices: [
+            "Exposing the client to a dog immediately",
+            "Creating a hierarchy of fear-inducing situations",
+            "Encouraging the client to adopt a dog",
+            "Discussing the client's childhood experiences with dogs"
+        ],
+        answer: 1,
+        explanation: "Systematic desensitization begins by developing a hierarchy of feared situations, usually progressing from least frightening to most frightening."
+    },
+    {
+        number: 70,
+        question: "Cassandra is treating a client with agoraphobia who avoids leaving home due to intense fear. Which intervention is most appropriate?",
+        choices: [
+            "Cognitive Behavioral Therapy (CBT) focusing on irrational thoughts",
+            "Psychoanalytic therapy exploring unconscious fears",
+            "Encouraging the client to face all fears at once",
+            "Group therapy to discuss phobias"
+        ],
+        answer: 0,
+        explanation: "CBT can address anxious thoughts and avoidance patterns and may incorporate gradual exposure to feared situations."
+    },
+    {
+        number: 71,
+        question: "Andrea feels overwhelmed with balancing work and family responsibilities. Using ecological systems theory, how should the social worker approach this situation?",
+        choices: [
+            "Focus solely on the client's time management skills",
+            "Examine the interactions between the client's work, family, and social environment",
+            "Advise the client to reduce work hours without considering other factors",
+            "Suggest the client should focus only on family responsibilities"
+        ],
+        answer: 1,
+        explanation: "Ecological systems theory examines the reciprocal interactions between individuals and their multiple environments."
+    },
+    {
+        number: 72,
+        question: "Victoria is struggling with self-esteem issues due to constant criticism from a family member. Which intervention based on humanistic theory would be most appropriate?",
+        choices: [
+            "Encourage the client to confront the family member aggressively",
+            "Help the client build self-worth through positive self-regard and validation",
+            "Advise the client to ignore the family member's criticism",
+            "Focus on medication to alleviate symptoms"
+        ],
+        answer: 1,
+        explanation: "Humanistic approaches emphasize acceptance, validation, self-worth, and the development of a positive sense of self."
+    },
+    {
+        number: 73,
+        question: "Sitio Cansoy-ong is experiencing high rates of unemployment and poverty. As a social worker, which approach would you take to address these systemic issues?",
+        choices: [
+            "Providing individual counseling to each unemployed person",
+            "Developing community programs to improve job skills and employment opportunities",
+            "Advising community members to relocate to areas with better job prospects",
+            "Ignoring the problem as it is beyond the scope of social work"
+        ],
+        answer: 1,
+        explanation: "Community-level programs that improve skills and employment opportunities address systemic conditions contributing to unemployment."
+    },
+    {
+        number: 74,
+        question: "Philip is helping a community affected by a natural disaster. Which immediate intervention is most appropriate?",
+        choices: [
+            "Conducting long-term therapy sessions with each individual",
+            "Providing emergency resources and support services",
+            "Focusing on community development projects",
+            "Ignoring immediate needs to plan for future prevention"
+        ],
+        answer: 1,
+        explanation: "After a disaster, immediate social work priorities include safety, basic needs, emergency resources, support, and connecting people with services."
+    },
+    {
+        number: 75,
+        question: "Lolita is a teenager experiencing identity confusion and is struggling with their sense of self. According to Erikson's theory, which stage is Lolita likely in?",
+        choices: [
+            "Trust vs. Mistrust",
+            "Autonomy vs. Shame and Doubt",
+            "Identity vs. Role Confusion",
+            "Intimacy vs. Isolation"
+        ],
+        answer: 2,
+        explanation: "Erikson's Identity vs. Role Confusion stage occurs primarily during adolescence and involves developing a coherent sense of identity."
+    },
+    {
+        number: 76,
+        question: "A client with schizotypal personality disorder (SPD) has unusual beliefs and behaviors. What is the best approach for the social worker?",
+        choices: [
+            "Cognitive Behavioral Therapy (CBT) to address distorted thoughts",
+            "Ignoring the client's unusual beliefs",
+            "Encouraging the client's eccentric behavior",
+            "Suggesting the client avoid social interactions"
+        ],
+        answer: 0,
+        explanation: "CBT can help clients examine unusual or distorted thoughts while developing healthier coping and social skills."
+    },
+    {
+        number: 77,
+        question: "Elmie is facilitating a support group for survivors of domestic violence. What is the most important focus of the group?",
+        choices: [
+            "Providing a safe and supportive environment for sharing experiences",
+            "Encouraging survivors to confront their abusers",
+            "Focusing solely on legal actions against abusers",
+            "Ignoring past experiences and looking only to the future"
+        ],
+        answer: 0,
+        explanation: "A safe and supportive environment allows survivors to share experiences, build support networks, and begin healing."
+    },
+    {
+        number: 78,
+        question: "Maris is developing a program to support immigrant families adjusting to a new country. What should be the primary focus?",
+        choices: [
+            "Assisting with legal documentation and employment",
+            "Encouraging families to abandon their cultural practices",
+            "Isolating immigrant families to maintain their cultural identity",
+            "Ignoring the families' cultural backgrounds"
+        ],
+        answer: 0,
+        explanation: "Practical support such as legal assistance and employment resources can help immigrant families adjust while respecting their cultural backgrounds."
+    },
+    {
+        number: 79,
+        question: "Jiwon is helping a client from a collectivist culture who is experiencing conflict with their individualistic workplace. What should Jiwon focus on?",
+        choices: [
+            "Helping the client navigate cultural differences and find a balance",
+            "Encouraging the client to fully adopt individualistic values",
+            "Advising the client to ignore workplace norms",
+            "Suggesting the client quit their job"
+        ],
+        answer: 0,
+        explanation: "Culturally responsive practice helps clients navigate cultural differences without requiring them to abandon their cultural identity."
+    },
+    {
+        number: 80,
+        question: "Erza is addressing the needs of a multicultural community with diverse backgrounds. What approach is most effective?",
+        choices: [
+            "Culturally competent practice that respects and integrates diverse cultural perspectives",
+            "Enforcing a single cultural standard",
+            "Ignoring cultural differences",
+            "Isolating different cultural groups from each other"
+        ],
+        answer: 0,
+        explanation: "Culturally competent practice recognizes, respects, and appropriately incorporates diverse cultural perspectives."
+    },
+    {
+        number: 81,
+        question: "Lucy is experiencing stigmatization due to their mental illness. What is the best approach for the social worker to take?",
+        choices: [
+            "Educating the client and their community about mental health to reduce stigma",
+            "Encouraging the client to hide their illness",
+            "Ignoring the client's experience of stigma",
+            "Suggesting the client relocate to avoid stigmatization"
+        ],
+        answer: 0,
+        explanation: "Education and awareness can challenge misconceptions and reduce stigma while helping the client access appropriate support."
+    },
+    {
+        number: 82,
+        question: "Natsu is developing a program for at-risk youth to prevent delinquency. What is the most effective component to include?",
+        choices: [
+            "Mentorship programs and positive role models",
+            "Strict curfews and surveillance",
+            "Isolating youth from their peers",
+            "Focusing solely on punitive measures"
+        ],
+        answer: 0,
+        explanation: "Mentorship and positive role models can provide guidance, support, healthy relationships, and constructive behavioral examples."
+    },
+    {
+        number: 83,
+        question: "Gray is experiencing a mid-life crisis and questioning his life's purpose. According to Erikson's stages of development, which stage might he be struggling with?",
+        choices: [
+            "Trust vs. Mistrust",
+            "Autonomy vs. Shame and Doubt",
+            "Generativity vs. Stagnation",
+            "Integrity vs. Despair"
+        ],
+        answer: 2,
+        explanation: "Generativity vs. Stagnation is associated with adulthood and involves productivity, contribution, purpose, and concern for future generations."
+    },
+    {
+        number: 84,
+        question: "A client with low self-esteem is struggling to find motivation. According to Maslow's Hierarchy of Needs, which need is likely unmet?",
+        choices: [
+            "Physiological needs",
+            "Safety needs",
+            "Love and belonging needs",
+            "Esteem needs"
+        ],
+        answer: 3,
+        explanation: "Esteem needs include feelings of competence, achievement, recognition, and self-worth."
+    },
+    {
+        number: 85,
+        question: "A client, Marco, with obsessive-compulsive tendencies seeks perfection in all tasks. Which personality theory best explains this behavior?",
+        choices: [
+            "Freud's Psychoanalytic Theory",
+            "Erikson's Psychosocial Development",
+            "Maslow's Hierarchy of Needs",
+            "Bandura's Social Learning Theory"
+        ],
+        answer: 0,
+        explanation: "Freud's psychoanalytic theory explains personality and behavior in terms of unconscious conflicts, motives, and early experiences."
+    },
+    {
+        number: 86,
+        question: "A client, Juvia, with dependent personality disorder (DPD) has difficulty making decisions and relies heavily on others. What is the best therapeutic approach?",
+        choices: [
+            "Cognitive Behavioral Therapy (CBT) focusing on decision-making skills",
+            "Ignoring the client's dependency",
+            "Encouraging the client's reliance on others",
+            "Suggesting the client avoid social interactions"
+        ],
+        answer: 0,
+        explanation: "CBT can help clients with dependent patterns develop confidence, independent decision-making, problem-solving, and healthier beliefs about themselves."
+    },
+    {
+        number: 87,
+        question: "A client, Tanjiro, with borderline personality disorder (BPD) experiences intense and unstable emotions. Which therapeutic approach is most effective?",
+        choices: [
+            "Dialectical Behavior Therapy (DBT) focusing on emotional regulation",
+            "Ignoring the client's emotional outbursts",
+            "Encouraging the client's emotional instability",
+            "Suggesting the client suppress their emotions"
+        ],
+        answer: 0,
+        explanation: "DBT is particularly effective for BPD and teaches skills for emotional regulation, distress tolerance, mindfulness, and interpersonal effectiveness."
+    },
+    {
+        number: 88,
+        question: "Joaquin prioritizes family obligations over personal ambitions. Which cultural value might this reflect?",
+        choices: [
+            "Hiya",
+            "Utang na loob",
+            "Bayanihan",
+            "Pakikisama"
+        ],
+        answer: 1,
+        explanation: "Utang na loob refers to a sense of gratitude and reciprocal obligation toward people who have provided significant help or support."
+    },
+    {
+        number: 89,
+        question: "Narciso avoids discussing their mental health issues due to fear of social stigma. Which cultural trait is influencing their behavior?",
+        choices: [
+            "Pakikisama",
+            "Utang na loob",
+            "Hiya",
+            "Bayanihan"
+        ],
+        answer: 2,
+        explanation: "Hiya refers to a sense of shame, embarrassment, or concern about social judgment that can influence behavior."
+    },
+    {
+        number: 90,
+        question: "Maxima frequently engages in community activities and helps neighbors. This behavior is an example of:",
+        choices: [
+            "Hiya",
+            "Pakikisama",
+            "Bayanihan",
+            "Utang na loob"
+        ],
+        answer: 2,
+        explanation: "Bayanihan refers to communal cooperation and helping one another, particularly within a community."
+    },
+    {
+        number: 91,
+        question: "Melvin is assisting a community in addressing high unemployment rates. What intervention is most likely to have a sustainable impact?",
+        choices: [
+            "Short-term financial aid",
+            "Comprehensive job training and placement programs",
+            "Encouraging community members to leave the area",
+            "Increasing police presence"
+        ],
+        answer: 1,
+        explanation: "Comprehensive job training and placement programs address long-term employment needs by improving skills and access to sustainable work."
+    },
+    {
+        number: 92,
+        question: "Michael is developing a program to improve educational outcomes in a low-income community. What should be the primary focus?",
+        choices: [
+            "Providing resources and support for both students and their families",
+            "Focusing solely on standardized test scores",
+            "Ignoring family involvement",
+            "Implementing a strict disciplinary policy"
+        ],
+        answer: 0,
+        explanation: "Supporting both students and families addresses the broader environmental factors that influence educational success."
+    },
+    {
+        number: 93,
+        question: "The client, Vanessa, with narcissistic personality disorder (NPD) exhibits a grandiose sense of self-importance. What is the best therapeutic approach?",
+        choices: [
+            "Cognitive Behavioral Therapy (CBT) focusing on empathy and realistic self-perception",
+            "Ignoring the client's grandiosity",
+            "Reinforcing the client's self-importance",
+            "Suggesting the client avoid social interactions"
+        ],
+        answer: 0,
+        explanation: "CBT can help address distorted self-perceptions and develop healthier interpersonal patterns, including greater empathy and realistic self-appraisal."
+    },
+    {
+        number: 94,
+        question: "The client, Arlene, with schizoid personality disorder (SPD) prefers solitude and has limited emotional expression. What is the most appropriate intervention?",
+        choices: [
+            "Cognitive Behavioral Therapy (CBT) focusing on social skills and emotional expression",
+            "Encouraging the client's preference for isolation",
+            "Ignoring the client's behavior",
+            "Suggesting the client remain isolated"
+        ],
+        answer: 0,
+        explanation: "CBT-based interventions can help address social functioning and emotional expression while respecting the client's pace and preferences."
+    },
+    {
+        number: 95,
+        question: "Lee is helping a client cope with the stress of living in a high-crime neighborhood. What strategy is most effective?",
+        choices: [
+            "Developing a safety plan and connecting the client to community resources",
+            "Encouraging the client to ignore the crime",
+            "Suggesting the client move immediately",
+            "Increasing the client's isolation"
+        ],
+        answer: 0,
+        explanation: "A safety plan combined with community resources can help reduce risk, improve coping, and strengthen the client's support network."
+    },
+    {
+        number: 96,
+        question: "Marifel is supporting a client facing workplace discrimination. What is the most appropriate intervention?",
+        choices: [
+            "Assisting the client in filing a formal complaint and providing emotional support",
+            "Ignoring the discrimination",
+            "Suggesting the client tolerate the situation",
+            "Advising the client to quit their job without other plans"
+        ],
+        answer: 0,
+        explanation: "A social worker can provide emotional support while helping the client understand and access appropriate workplace complaint and advocacy processes."
+    },
+    {
+        number: 97,
+        question: "Carren is helping a client who has been involved in substance abuse. What is the most effective intervention?",
+        choices: [
+            "Comprehensive rehabilitation programs, including counseling and support groups",
+            "Ignoring the substance abuse",
+            "Suggesting the client manage withdrawal on their own",
+            "Focusing solely on punitive measures"
+        ],
+        answer: 0,
+        explanation: "Comprehensive rehabilitation can combine counseling, behavioral support, recovery resources, and peer support to address substance use and recovery needs."
+    },
+    {
+        number: 98,
+        question: "Krishell is highly motivated by recognition and achievement in their career. According to Maslow's Hierarchy of Needs, which need is being fulfilled?",
+        choices: [
+            "Physiological needs",
+            "Safety needs",
+            "Love and belonging needs",
+            "Esteem needs"
+        ],
+        answer: 3,
+        explanation: "Esteem needs include achievement, recognition, competence, and respect from oneself and others."
+    },
+    {
+        number: 99,
+        question: "Jelyn, who is struggling with feelings of worthlessness and failure, is likely dealing with unmet needs in which stage of Maslow's Hierarchy?",
+        choices: [
+            "Physiological needs",
+            "Safety needs",
+            "Love and belonging needs",
+            "Esteem needs"
+        ],
+        answer: 3,
+        explanation: "Feelings of worthlessness and failure are associated with unmet esteem needs, which include self-worth, competence, achievement, and recognition."
+    },
+    {
+        number: 100,
+        question: "Adelfa is helping a client who feels a lack of purpose and fulfillment in life. According to Erikson's stages of development, which stage might they be struggling with?",
+        choices: [
+            "Trust vs. Mistrust",
+            "Initiative vs. Guilt",
+            "Intimacy vs. Isolation",
+            "Integrity vs. Despair"
+        ],
+        answer: 3,
+        explanation: "Integrity vs. despair involves reflecting on one's life and developing a sense of fulfillment, meaning, and acceptance."
     }
 ];
-
-const caseStudies = {
-
-    case1: {
-        title: "Case 1",
-        story: `On November 20, 2020, Mark was 1 month old when entrusted by Victoria T.
-Jimenez, his birth mother to Spouses Martin and Claire Roco at their residence in
-Barangay Basdiot, Masbate.
-As recalled by Spouses Roco, the child was wearing white old clothes without short
-and blue mini shoes. He had a reddish skin because of the rushes, his tummy is big
-and the child was very thin. Despite his physical condition, the child was observed
-livelier. It was the biological mother Victoria who gave name to the child which
-means instrument of God is merciful to other.
-Mark is presently under the custodial care of Mr Martin and Claire Roco. They are
-presently residing at Barangay Basdiot, Masbate. The place is a few meters away
-from the national road and public utility jeepney stop and it is accessible to any
-vehicle. The couple’s residence is a mountain resort with a bungalow type with tiled
-floors, garage, entry porch, spacious living room, dining area, kitchen, 4 bedrooms
-with separate toilet and baths. It is complete with fixtures, furniture and appliances.
-They also owned a mountain resort with 2 swimming pools.
-There are appliances such as refrigerator, air conditioner, television sets, electric
-fans, blenders, vacuum cleaner, washing machine, and others. They also have
-generator used whenever there is no electricity. The receiving area were decorated
-with plants and other furniture’s pleasing to the eyes of the visitors. Their mountain
-resort is estimated to 1 hectare and a wonderful garden.
-Mark sleeps with spouses Roco in one bedroom since he is the youngest and the
-baby of the family. Although they trained the child to sleep in his own room but
-Mark is comfortable to sleep with his known parents. He is personally taken cared
-by Mrs. Claire Roco. As observed by the undersigned, Mark has all the attention of
-everybody in their family being the youngest child in the family.
-Roco couple file a petition to legally adopt the child.`
-    },
-
-    case2: {
-        title: "Case 2",
-        story: `SARS-CoV-2 viral RNA was reported to be detected by PCR on the initial swabs and
-she was identified as the first confirmed COVID-19 case in the Philippines. Her
-symptoms resolved, and she was discharged. Patient 2, a 44-year-old male, had
-symptoms of fever, cough, and chills. Influenza B and Streptococcus pneumoniae were
-detected by PCR on initial NPS/OPS swabs. He was treated for community-acquired
-pneumonia with intravenous antibiotics, but his condition deteriorated and he required
-intubation. On January 31, SARS-CoV-2 viral RNA was reported to be detected by PCR
-on the initial swabs, and he was identified as the 2nd confirmed COVID-19 infection in
-the Philippines. On February 1, the patient’s condition deteriorated, and following a
-cardiac arrest, it was not possible to revive him. He was thus confirmed as the first
-COVID-19 death outside of China.`
-    }
-
-};

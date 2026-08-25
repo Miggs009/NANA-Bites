@@ -9,7 +9,7 @@ const flashcards = [
             "Ego",
             "Subliminal perception"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "The id is the unconscious part of personality that operates according to the pleasure principle and seeks immediate gratification."
     },
     {
@@ -22,7 +22,7 @@ const flashcards = [
             "By studying behavioral techniques",
             "By prescribing medication"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "The provided answer key identifies psychoanalysis as the answer."
     },
     {
@@ -35,7 +35,7 @@ const flashcards = [
             "Genital",
             "Phallic"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Repression is a defense mechanism, not one of Freud's psychosexual stages. The stages include oral, anal, phallic, latency, and genital."
     },
     {
@@ -47,7 +47,7 @@ const flashcards = [
             "Regression",
             "Denial"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "Denial is a defense mechanism in which a person refuses to accept or acknowledge an unpleasant reality."
     },
     {
@@ -59,7 +59,7 @@ const flashcards = [
             "Latency",
             "Phallic"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "The oral stage is Freud's first psychosexual stage and focuses on pleasure obtained through the mouth."
     },
     {
@@ -71,7 +71,7 @@ const flashcards = [
             "Repression",
             "Denial"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "Denial involves refusing to accept a painful or distressing reality."
     },
     {
@@ -84,7 +84,7 @@ const flashcards = [
             "Freud",
             "None of these"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "John Bowlby's work on attachment and the effects of separation helped establish the importance of maintaining parent-child contact."
     },
     {
@@ -96,7 +96,7 @@ const flashcards = [
             "8 months",
             "24 months"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "The provided answer key identifies approximately 6 months as the answer."
     },
     {
@@ -108,7 +108,7 @@ const flashcards = [
             "Psychological factor",
             "Affective factor"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "The provided answer key identifies emotional factors as affecting John's functioning."
     },
     {
@@ -120,7 +120,7 @@ const flashcards = [
             "Initiative vs. Guilt",
             "Industry vs. Inferiority"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "The provided answer key identifies Initiative vs. Guilt as the answer."
     },
     {
@@ -132,7 +132,7 @@ const flashcards = [
             "Social status",
             "Ego identity"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Erikson's theory emphasizes psychosocial conflicts or crises that individuals encounter throughout development."
     },
     {
@@ -144,7 +144,7 @@ const flashcards = [
             "Paradigm shift",
             "Turmoil"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Each stage involves a psychosocial conflict or crisis that must be addressed for healthy development."
     },
     {
@@ -156,7 +156,7 @@ const flashcards = [
             "Initiative vs. Guilt",
             "Identity vs. Role Confusion"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Erikson's first psychosocial stage is Trust vs. Mistrust and occurs during infancy."
     },
     {
@@ -168,7 +168,7 @@ const flashcards = [
             "Is a means of coping with excessive social control.",
             "Is the result of permissive training during childhood."
         ],
-        answer: 4,
+        answer: 3,
         explanation: "The provided answer key identifies permissive training during childhood as the answer."
     },
     {
@@ -180,7 +180,7 @@ const flashcards = [
             "Integrity vs. Despair",
             "Intimacy vs. Isolation"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "Erikson's young adulthood stage centers on Intimacy vs. Isolation."
     },
     {
@@ -192,7 +192,7 @@ const flashcards = [
             "Studies of displaced social groups in the United States.",
             "All of the above."
         ],
-        answer: 2,
+        answer: 1,
         explanation: "The provided answer key identifies Erikson's early wandering throughout Europe as the answer."
     },
     {
@@ -204,7 +204,7 @@ const flashcards = [
             "Identity vs. Role Confusion",
             "Generativity vs. Stagnation"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Adolescence is associated with the psychosocial conflict of Identity vs. Role Confusion."
     },
     {
@@ -216,7 +216,7 @@ const flashcards = [
             "A poor sense of self",
             "Mistrust"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "During Industry vs. Inferiority, failure to develop competence can lead to feelings of inferiority."
     },
     {
@@ -228,7 +228,7 @@ const flashcards = [
             "Purpose",
             "Wisdom"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "Successfully resolving Integrity vs. Despair results in the virtue of wisdom."
     },
     {
@@ -238,7 +238,7 @@ const flashcards = [
             "Anal fixation",
             "Mouth fixation"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "The provided answer key identifies mouth fixation as the answer."
     },
     {
@@ -250,7 +250,7 @@ const flashcards = [
             "Moving Toward",
             "Moving Downward"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Moving Away describes withdrawal, isolation, and distancing oneself from others."
     },
     {
@@ -262,7 +262,7 @@ const flashcards = [
             "Moving Toward",
             "Moving Downward"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Moving Toward involves seeking affection, approval, and security through dependence and compliance."
     },
     {
@@ -274,7 +274,7 @@ const flashcards = [
             "Moving Toward",
             "Moving Downward"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Moving Against involves hostility, resistance, competition, and attempts to gain power or control."
     },
     {
@@ -286,7 +286,7 @@ const flashcards = [
             "Doctrine",
             "Code of Ethics"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Ideology is a system of ideas or beliefs that can be used to justify social arrangements and interests."
     },
     {
@@ -298,7 +298,7 @@ const flashcards = [
             "Policy",
             "Authority"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Control theory focuses on the social controls and restraints that discourage individuals from engaging in deviant behavior."
     },
     {
@@ -310,7 +310,7 @@ const flashcards = [
             "That deviance is controlled by society",
             "That deviance is relative to different cultures, traditions, and practices"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Control theories assume that deviance occurs when social controls or restraints are weak or absent."
     },
     {
@@ -323,7 +323,7 @@ const flashcards = [
             "I only",
             "None of the above"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "The provided answer key identifies III only. The standard components of Hirschi's social bond are attachment, commitment, involvement, and belief."
     },
     {
@@ -336,7 +336,7 @@ const flashcards = [
             "Deterrence Perspective",
             "Social Process Theory"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Labeling theory argues that deviance is partly created through society's process of labeling certain individuals or behaviors as deviant."
     },
     {
@@ -349,7 +349,7 @@ const flashcards = [
             "Radical Theory",
             "Social Process Theory"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "Radical theory examines crime through the lens of capitalism, class inequality, and power relationships."
     },
     {
@@ -361,7 +361,7 @@ const flashcards = [
             "A prediction about yourself causing you to behave in such a way that it comes true.",
             "A relatively stable set of perceptions that people hold about themselves."
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Symbolic interactionism emphasizes that people interpret and act toward others and situations based on the meanings they assign to them."
     },
     {
@@ -374,7 +374,7 @@ const flashcards = [
             "The relationship between the inner self and the outer self.",
             "None of the above"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "The relationship between the inner self and outer self is not identified as one of the central themes of symbolic interactionism in the provided material."
     },
     {
@@ -387,7 +387,7 @@ const flashcards = [
             "The conception of self.",
             "The fulfillment of the fictional self."
         ],
-        answer: 2,
+        answer: 1,
         explanation: "A self-fulfilling prophecy occurs when a person's expectation or prediction influences behavior in a way that causes the expected outcome to occur."
     },
     {
@@ -399,7 +399,7 @@ const flashcards = [
             "A shared system of verbal and non-verbal symbols.",
             "The conception of self."
         ],
-        answer: 3,
+        answer: 2,
         explanation: "Language is a shared system of verbal and non-verbal symbols used for communication and meaning-making."
     },
     {
@@ -411,7 +411,7 @@ const flashcards = [
             "Conscious, subconscious, and preconscious",
             "Inner, outer, and the whole"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Freud's structural model of personality consists of the id, ego, and superego."
     },
     {
@@ -423,7 +423,7 @@ const flashcards = [
             "False, because it is a group of subconscious, not unconscious, ideas.",
             "False, it should be Electra Complex, not Oedipus Complex."
         ],
-        answer: 2,
+        answer: 1,
         explanation: "The provided answer key identifies False. The traditional description of the Oedipus complex involves a child's desire for the opposite-sex parent and rivalry with the same-sex parent."
     },
     {
@@ -435,7 +435,7 @@ const flashcards = [
             "70% unconscious and 30% conscious",
             "90% unconscious and 10% conscious"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "The provided answer key identifies the mind as approximately 90% unconscious and 10% conscious."
     },
     {
@@ -447,7 +447,7 @@ const flashcards = [
             "Latency",
             "Adolescence"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "Identity vs. Role Confusion is Erikson's psychosocial crisis associated primarily with adolescence."
     },
     {
@@ -459,7 +459,7 @@ const flashcards = [
             "Mesomorphic",
             "Somatoformic"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Endomorphic body types are traditionally described as having a softer, rounder body shape and are associated in this theory with comfort-seeking and sociability."
     },
     {
@@ -471,7 +471,7 @@ const flashcards = [
             "Social Exchange Theory",
             "Social Learning Theory"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "Structural-functional theory examines the family in terms of its socially recognized structure, roles, and functions within society."
     },
     {
@@ -484,13 +484,12 @@ const flashcards = [
             "Communication and Conflict Theory",
             "Family Systems Theory"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Ecological systems theory emphasizes how environmental contexts and interactions influence human development."
     },
     {
         number: 41,
         case: "case1",
-
         question: "What refers to a document issued by the Secretary of the Department of Social Welfare and Development (DSWD) or the Secretary's duly authorized representative as provided for by Republic Act No. 9523?",
         choices: [
             "CDCLAA",
@@ -498,13 +497,12 @@ const flashcards = [
             "CCDLAA",
             "CCDLA"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "The provided answer key identifies CDCLAA as the answer."
     },
     {
         number: 42,
         case: "case1",
-
         question: "When was RA 11222, also known as 'An Act Allowing the Rectification of Simulated Birth Records and Prescribing Administrative Adoption Proceedings for the Purpose,' signed by the President?",
         choices: [
             "February 28, 2019",
@@ -512,13 +510,12 @@ const flashcards = [
             "March 28, 2019",
             "March 29, 2019"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "The provided answer key identifies February 29, 2019 as the answer."
     },
     {
         number: 43,
         case: "case1",
-
         question: "When was RA 11222 published in the Official Gazette to inform people?",
         choices: [
             "February 28, 2019",
@@ -526,13 +523,12 @@ const flashcards = [
             "March 29, 2019",
             "March 28, 2019"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "The provided answer key identifies March 14, 2019 as the answer."
     },
     {
         number: 44,
         case: "case1",
-
         question: "When was RA 11222 effective?",
         choices: [
             "February 28, 2019",
@@ -540,13 +536,12 @@ const flashcards = [
             "March 29, 2019",
             "March 28, 2019"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "The provided answer key identifies March 29, 2019 as the effective date."
     },
     {
         number: 45,
         case: "case1",
-
         question: "In making the Social Case Study of the Child for Adoption, the Social Worker may include the Child Developmental History. In line with this, at what age can the child be able to drink from a cup?",
         choices: [
             "0-3 months",
@@ -554,13 +549,12 @@ const flashcards = [
             "0-1 month",
             "7-11 months"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "The provided answer key identifies 7-11 months as the developmental period when the child can drink from a cup."
     },
     {
         number: 46,
         case: "case1",
-
         question: "At what age in the developmental milestones can the child be able to feed self neatly, with minimal spilling?",
         choices: [
             "1-3 years old",
@@ -568,13 +562,12 @@ const flashcards = [
             "8-11 months",
             "7 years old"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "The provided answer key identifies 1-3 years old as the appropriate developmental period."
     },
     {
         number: 47,
         case: "case1",
-
         question: "At what age in the developmental milestones can the child be able to draw a circle and square?",
         choices: [
             "1-2 years",
@@ -582,13 +575,12 @@ const flashcards = [
             "7-9 years",
             "10-11 months"
         ],
-        answer: 2,
+        answer: 1,
         explanation: "The provided answer key identifies 3-6 years as the developmental period for this milestone."
     },
     {
         number: 48,
         case: "case1",
-
         question: "All petitions, documents, records, and papers relating to administrative adoption proceedings in the files of the city or municipal SWDOs, the DSWD central and field offices, or any other agency or institution participating in such proceedings shall be strictly _______.",
         choices: [
             "Confidential",
@@ -596,13 +588,12 @@ const flashcards = [
             "Off limit",
             "Unrecorded"
         ],
-        answer: 1,
+        answer: 0,
         explanation: "Adoption-related petitions, records, and documents are required to be kept confidential."
     },
     {
         number: 49,
         case: "case1",
-
         question: "When did President Rodrigo Duterte sign Republic Act 11469, or the 'Bayanihan to Heal as One Act,' into law?",
         choices: [
             "March 22, 2020",
@@ -610,13 +601,12 @@ const flashcards = [
             "March 26, 2020",
             "March 25, 2020"
         ],
-        answer: 3,
+        answer: 2,
         explanation: "The provided answer key identifies March 26, 2020 as the date."
     },
     {
         number: 50,
         case: "case2",
-
         question: "What was the date that SARS-CoV-2 was confirmed in the Philippines?",
         choices: [
             "January 24, 2020",
@@ -624,7 +614,7 @@ const flashcards = [
             "January 18, 2020",
             "January 30, 2020"
         ],
-        answer: 4,
+        answer: 3,
         explanation: "The provided answer key identifies January 30, 2020 as the date."
     }
 ];

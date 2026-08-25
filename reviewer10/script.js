@@ -1,22 +1,6 @@
 // Make a copy of the flashcards
 const quizCards = JSON.parse(JSON.stringify(flashcards));
 
-// Shuffle Function (Fisher-Yates)
-function shuffle(array) {
-
-    for (let i = array.length - 1; i > 0; i--) {
-
-        const j = Math.floor(Math.random() * (i + 1));
-
-        [array[i], array[j]] = [array[j], array[i]];
-
-    }
-
-}
-
-// Shuffle all questions
-shuffle(quizCards);
-
 // Quiz Variables
 let currentQuestion = 0;
 let score = 0;
@@ -41,6 +25,10 @@ const reviewScreen = document.getElementById("reviewScreen");
 const reviewBtn = document.getElementById("reviewBtn");
 const reviewContainer = document.getElementById("reviewContainer");
 
+const caseStudyElement = document.getElementById("caseStudy");
+const caseTitleElement = document.getElementById("caseTitle");
+const caseStoryElement = document.getElementById("caseStory");
+
 // Start Quiz
 loadQuestion();
 
@@ -57,13 +45,9 @@ function loadQuestion() {
 
     const card = quizCards[currentQuestion];
 
-    // Randomize Choices
-
-    const correctAnswer = card.choices[card.answer];
-
-    shuffle(card.choices);
-
-    card.answer = card.choices.indexOf(correctAnswer);
+    // =====================================
+    // QUESTION NUMBER
+    // =====================================
 
     questionNumber.innerHTML =
         `Question ${currentQuestion + 1} of ${quizCards.length}`;
@@ -74,7 +58,52 @@ function loadQuestion() {
     progressFill.style.width =
         ((currentQuestion + 1) / quizCards.length) * 100 + "%";
 
-    questionElement.innerHTML = card.question;
+
+    // =====================================
+    // CASE STUDY
+    // =====================================
+
+    if (
+        card.case &&
+        caseStudies[card.case]
+    ) {
+
+        const currentCase = caseStudies[card.case];
+
+        // Show case study
+        caseStudyElement.classList.remove("hidden");
+
+        // Display case title
+        caseTitleElement.innerHTML =
+            currentCase.title;
+
+        // Display case story
+        caseStoryElement.innerHTML =
+            currentCase.story;
+
+    }
+    else {
+
+        // Hide case study for normal questions
+        caseStudyElement.classList.add("hidden");
+
+        caseTitleElement.innerHTML = "";
+        caseStoryElement.innerHTML = "";
+
+    }
+
+
+    // =====================================
+    // QUESTION
+    // =====================================
+
+    questionElement.innerHTML =
+        card.question;
+
+
+    // =====================================
+    // CHOICES
+    // =====================================
 
     choicesElement.innerHTML = "";
 
@@ -92,18 +121,23 @@ function loadQuestion() {
                     name="choice"
                     value="${index}">
 
-                <strong>${String.fromCharCode(65 + index)}.</strong>
+                <strong>
+                    ${String.fromCharCode(65 + index)}.
+                </strong>
 
                 ${choice}
 
             </label>
         `;
 
+
         div.onclick = function () {
 
             document
                 .querySelectorAll(".choice")
-                .forEach(c => c.classList.remove("selected"));
+                .forEach(c =>
+                    c.classList.remove("selected")
+                );
 
             div.classList.add("selected");
 
@@ -113,11 +147,14 @@ function loadQuestion() {
 
         };
 
+
         choicesElement.appendChild(div);
 
     });
 
 }
+
+
 
 
 // =====================================
@@ -379,6 +416,3 @@ reviewBtn.addEventListener("click", function(){
     });
 
 });
-
-
-

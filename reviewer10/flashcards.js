@@ -205,6 +205,7 @@ const flashcards = [
     },
     {
         number: 18,
+        case: "case1",
         question: "What is the frequency of the data?",
         choices: [
             "13",
@@ -217,6 +218,7 @@ const flashcards = [
     },
     {
         number: 19,
+        case: "case1",
         question: "What is the mean of the salary?",
         choices: [
             "38,615",
@@ -229,6 +231,7 @@ const flashcards = [
     },
     {
         number: 20,
+        case: "case1",
         question: "What is the median of the salaries?",
         choices: [
             "30,000",
@@ -241,6 +244,7 @@ const flashcards = [
     },
     {
         number: 21,
+        case: "case1",
         question: "What is the mode of the salary?",
         choices: [
             "30,000",
@@ -421,6 +425,7 @@ const flashcards = [
     },
     {
         number: 36,
+        case: "case2",
         question: "What happened to Maria in the company?",
         choices: [
             "Promotion",
@@ -433,6 +438,7 @@ const flashcards = [
     },
     {
         number: 37,
+        case: "case2",
         question: "What happened to John in the company?",
         choices: [
             "Transfer",
@@ -445,6 +451,7 @@ const flashcards = [
     },
     {
         number: 38,
+        case: "case2",
         question: "Transfer is considered what type of movement in an organization?",
         choices: [
             "Vertical",
@@ -457,6 +464,7 @@ const flashcards = [
     },
     {
         number: 39,
+        case: "case2",
         question: "If an employee changes but keeps the same rank and salary, this is called.",
         choices: [
             "Promotion",
@@ -469,6 +477,7 @@ const flashcards = [
     },
     {
         number: 40,
+        case: "case2",
         question: "Which employees experienced vertical movement?",
         choices: [
             "Maria",
@@ -565,6 +574,7 @@ const flashcards = [
     },
     {
         number: 48,
+        case: "case3",
         question: "Which statement best explains the difference between the data presentation methods used by Zoro and Luffy?",
         choices: [
             "Zoro used textual presentation, while Luffy used graphical presentation.",
@@ -577,6 +587,7 @@ const flashcards = [
     },
     {
         number: 49,
+        case: "case3",
         question: "If Zoro wanted to present the increase or decrease in study hours visually, which method would be most suitable?",
         choices: [
             "Textual method",
@@ -589,6 +600,7 @@ const flashcards = [
     },
     {
         number: 50,
+        case: "case3",
         question: "Which of the following best describes the similarity between the studies of Zoro and Luffy?",
         choices: [
             "Both used graphs to interpret the data.",
@@ -600,3 +612,31 @@ const flashcards = [
         explanation: "Both researchers collected and presented data from respondents."
     }
 ];
+
+const caseStudies = {
+
+    case1: {
+        title: "Case 1",
+
+        table: {
+            headers: ["ANNUAL SALARY", "FREQUENCY"],
+
+            rows: [
+                ["25,000", "2"],
+                ["30,000", "6"],
+                ["46,000", "4"],
+                ["38,000", "1"]
+            ]
+        }
+    },
+
+    case2: {
+        title: "Case 2",
+        story: `Maria has been working as a customer service representative in a company for three years. Recently, the management decided to assign her to another department where she will still handle customer concerns with the same salary and responsibilities. Meanwhile, her co-worker John was assigned as a team supervisor with higher salary, greater responsibilities, and more authority over employees.`
+    },
+
+    case3: {
+        title: "Case 3",
+        story: `Zoro, a researcher, conducted a study on the study habits of first-year students. After gathering the data through a survey, he organized the responses into tables showing the frequency and percentage of students according to the number of hours they study daily. On the other hand, Luffy, another researcher, conducted a study on the reading preferences of second-year students and described the findings in paragraph form, explaining that most students preferred digital reading materials over printed books.`
+    }
+};

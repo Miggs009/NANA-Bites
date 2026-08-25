@@ -392,5 +392,38 @@ button:disabled{
 
     }
 
+    .case-study {
+    margin: 20px 0;
+    padding: 0;
+    background: #fffdf5;
+    border: 2px solid #e5c96b;
+    border-radius: 12px;
+    overflow: hidden;
+    }
+
+    .case-header {
+        padding: 12px 18px;
+        background: #f4d35e;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .case-title {
+        padding: 15px 20px 5px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .case-story {
+        padding: 10px 20px 20px;
+        line-height: 1.7;
+        font-size: 16px;
+        white-space: pre-line;
+    }
+
+    .hidden {
+        display: none !important;
+    }
+
 }
 

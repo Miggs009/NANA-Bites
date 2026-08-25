@@ -57,13 +57,8 @@ function loadQuestion() {
 
     const card = quizCards[currentQuestion];
 
-    // Randomize Choices
-
-    const correctAnswer = card.choices[card.answer];
-
-    shuffle(card.choices);
-
-    card.answer = card.choices.indexOf(correctAnswer);
+    // Choices are NOT randomized
+    // They will remain in the original order from flashcards.js
 
     questionNumber.innerHTML =
         `Question ${currentQuestion + 1} of ${quizCards.length}`;

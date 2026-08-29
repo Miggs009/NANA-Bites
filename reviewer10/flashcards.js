@@ -616,19 +616,16 @@ const flashcards = [
 const caseStudies = {
 
     case1: {
-        title: "Case 1",
+    title: "Case 1",
 
-        table: {
-            headers: ["ANNUAL SALARY", "FREQUENCY"],
-
-            rows: [
-                ["25,000", "2"],
-                ["30,000", "6"],
-                ["46,000", "4"],
-                ["38,000", "1"]
-            ]
-        }
-    },
+    table: `
+ANNUAL SALARY    FREQUENCY
+25,000           2
+30,000           6
+46,000           4
+38,000           1
+`
+},
 
     case2: {
         title: "Case 2",

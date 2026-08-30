@@ -60,40 +60,39 @@ function loadQuestion() {
 
 
     // =====================================
-    // CASE STUDY
-    // =====================================
+// CASE STUDY
+// =====================================
 
-    if (
-        card.case &&
-        caseStudies[card.case]
-    ) {
+if (
+    card.case &&
+    caseStudies[card.case]
+) {
 
-        const currentCase = caseStudies[card.case];
+    const currentCase = caseStudies[card.case];
 
-        // Show case study
-        caseStudyElement.classList.remove("hidden");
+    // Show case study
+    caseStudyElement.classList.remove("hidden");
 
-        // Display case title
-        caseTitleElement.innerHTML =
-            currentCase.title;
+    // Display case title
+    caseTitleElement.innerHTML =
+        currentCase.title;
 
-        // Display case story
-        caseStoryElement.innerHTML =
-            currentCase.story;
+    // Display story OR table
+    caseStoryElement.innerHTML =
+        currentCase.story || currentCase.table || "";
 
-    }
-    else {
+}
+else {
 
-        // Hide case study for normal questions
-        caseStudyElement.classList.add("hidden");
+    // Hide case study for normal questions
+    caseStudyElement.classList.add("hidden");
 
-        caseTitleElement.innerHTML = "";
-        caseStoryElement.innerHTML = "";
+    caseTitleElement.innerHTML = "";
+    caseStoryElement.innerHTML = "";
 
-    }
+}
 
-
-    // =====================================
+// =====================================
     // QUESTION
     // =====================================
 

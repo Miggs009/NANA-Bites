@@ -77,9 +77,48 @@ if (
     caseTitleElement.innerHTML =
         currentCase.title;
 
-    // Display story OR table
+    // Display case story or table
+if (currentCase.table) {
+
+    let tableHTML = `
+        <table class="case-table">
+            <thead>
+                <tr>
+    `;
+
+    currentCase.table.headers.forEach(header => {
+        tableHTML += `<th>${header}</th>`;
+    });
+
+    tableHTML += `
+                </tr>
+            </thead>
+            <tbody>
+    `;
+
+    currentCase.table.rows.forEach(row => {
+        tableHTML += `<tr>`;
+
+        row.forEach(cell => {
+            tableHTML += `<td>${cell}</td>`;
+        });
+
+        tableHTML += `</tr>`;
+    });
+
+    tableHTML += `
+            </tbody>
+        </table>
+    `;
+
+    caseStoryElement.innerHTML = tableHTML;
+
+} else {
+
     caseStoryElement.innerHTML =
-        currentCase.story || currentCase.table || "";
+        currentCase.story || "";
+
+}
 
 }
 else {
